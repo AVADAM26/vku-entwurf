@@ -54,3 +54,4 @@ Reines HTML, CSS und JavaScript, kein Build-Schritt. Änderungen direkt in den D
 - **Schreibstil:** Schweizer Schreibweise, immer „ss“, nie „ß“. Per Du, freundlich, direkt, einfache Sätze, kein Werbe-Deutsch.
 - Jede Änderung auf dem Handy und am Computer, hell und dunkel prüfen. Nichts darf seitlich überstehen.
 - Vor dem Arbeiten `git pull`, kleine Commits mit deutscher Beschreibung.
+- **Commits mit Daniels Konto** immer als `scotlandbydan` mit der Noreply-Adresse `317312833+dmuccios24-oss@users.noreply.github.com`, nie mit seiner Gmail-Adresse. Sonst blockt GitHub den Push. Gilt in allen Projekten.
