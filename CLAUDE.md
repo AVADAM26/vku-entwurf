@@ -4,11 +4,11 @@ Diese Datei lesen, bevor am Projekt gearbeitet wird.
 
 ## Worum es geht
 
-Gemeinsame Webseite von acht Fahrlehrerinnen und Fahrlehrern aus dem Oberbaselbiet. Sie bieten zusammen den Verkehrskundeunterricht (VKU) und den Nothelferkurs an, führen ihre Fahrschulen aber selbstständig. Auf der Seite wählt man ein Lokal, sucht sich einen Termin aus und meldet sich online an.
+Gemeinsame Webseite von neun Fahrlehrerinnen und Fahrlehrern aus dem Oberbaselbiet. Sie bieten zusammen den Verkehrskundeunterricht (VKU) und den Nothelferkurs an, führen ihre Fahrschulen aber selbstständig. Auf der Seite wählt man ein Lokal, sucht sich einen Termin aus und meldet sich online an.
 
-Die acht: Rahel Schaffner, Ken Klauser, Dominic Imhof, Georg Schweingruber, Christian Wüthrich, Thomas Egenter, Roger Schreiber, Thomas Stuck.
+Die neun: Rahel Schaffner, Ken Klauser, Dominic Imhof, Georg Schweingruber, Christian Wüthrich, Thomas Egenter, Roger Schreiber, Thomas Stuck, Cornelia Zumbrunn (Fahrschule Zumbrunn, https://www.fahrschule-zumbrunn.ch/, info@fahrschule-zumbrunn.ch).
 
-Umsetzung: Daniel Muccio für AVA-DAM. Das Projekt ist zu rund 95 % fertig. Daniel hat es bewusst allein gebaut. Änderungen nur in Absprache mit ihm.
+Umsetzung: Daniel Muccio für AVADAM. Das Projekt ist zu rund 95 % fertig. Daniel hat es bewusst allein gebaut. Änderungen nur in Absprache mit ihm.
 
 - Vorschau: https://avadam26.github.io/vku-entwurf/
 - Status: **Entwurf.** Für Suchmaschinen gesperrt (`robots.txt` und `noindex`), oben ein gelber Entwurfs-Hinweis. Beides erst beim echten Start entfernen.
@@ -20,7 +20,7 @@ index.html        Startseite: Kurse, Lokale, Fahrlehrer, Anmeldung, FAQ
 impressum.html    Impressum
 datenschutz.html  Datenschutzerklärung
 app.js            Hell/Dunkel, Klappmenü, Terminauswahl, Formular, Auto nach oben
-bilder/           Fotos der Fahrlehrer, Platzhalter, AVA-DAM Logo (avadam.svg)
+bilder/           Fotos der Fahrlehrer, Platzhalter, AVADAM Logo (avadam.svg)
 robots.txt        sperrt im Entwurf alles
 ```
 
@@ -33,18 +33,19 @@ Reines HTML, CSS und JavaScript, kein Build-Schritt. Änderungen direkt in den D
 - Klappmenü auf dem Handy.
 - Terminauswahl pro Lokal mit Übernahme ins Anmeldeformular, Spamschutz-Feld.
 - FAQ, Impressum, Datenschutz.
-- Im Footer „Webseite erstellt von“ mit AVA-DAM Logo, verlinkt auf https://avadam26.github.io/avadam/
+- Im Footer „Webseite erstellt von“ mit AVADAM Logo, verlinkt auf https://avadam26.github.io/avadam/
 
 ## Noch offen
 
 - Echtes Logo der VKU Oberbaselbiet (im Kopf steht noch ein Platzhalter „Logo“).
-- Gruppenfoto aller acht statt der Platzhalter-Illustration.
+- Gruppenfoto aller neun statt der Platzhalter-Illustration.
 - Kurzportraits der Fahrlehrer (teils „[Kurzportrait folgt]“).
+- Foto von Cornelia Zumbrunn: Bis jetzt gibt es nur ein Bild ihres Fahrschulautos, das steht vorläufig auf ihrer Karte.
 - Kontaktangaben im Impressum (Platzhalter in eckigen Klammern).
 - Echte Kursdaten statt Beispielterminen.
 - Anmeldeformular verschickt noch nichts. Für den echten Betrieb braucht es einen Versanddienst oder ein Backend.
 - Laut Auftrag soll jeder Fahrlehrer ein eigenes Login bekommen, und alle sollen alle Kurstermine bearbeiten können. Im statischen Entwurf noch nicht umgesetzt.
-- Hosting und Domain entscheiden die acht Fahrlehrer (Favorit: Hostpoint und vku-oberbaselbiet.ch).
+- Hosting und Domain entscheiden die neun Fahrlehrer (Favorit: Hostpoint und vku-oberbaselbiet.ch).
 - Beim Start: Entwurfs-Hinweis, `noindex` und Sperre in `robots.txt` entfernen, Sitemap und Meta-Daten ergänzen.
 
 ## Regeln
