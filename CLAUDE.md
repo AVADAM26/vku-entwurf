@@ -10,7 +10,7 @@ Die acht: Rahel Schaffner, Ken Klauser, Dominic Imhof, Georg Schweingruber, Chri
 
 Umsetzung: Daniel Muccio für AVA-DAM. Das Projekt ist zu rund 95 % fertig. Daniel hat es bewusst allein gebaut. Änderungen nur in Absprache mit ihm.
 
-- Vorschau: https://dmuccios24-oss.github.io/vku-entwurf/
+- Vorschau: https://avadam26.github.io/vku-entwurf/
 - Status: **Entwurf.** Für Suchmaschinen gesperrt (`robots.txt` und `noindex`), oben ein gelber Entwurfs-Hinweis. Beides erst beim echten Start entfernen.
 
 ## Aufbau
