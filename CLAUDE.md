@@ -33,7 +33,7 @@ Reines HTML, CSS und JavaScript, kein Build-Schritt. Änderungen direkt in den D
 - Klappmenü auf dem Handy.
 - Terminauswahl pro Lokal mit Übernahme ins Anmeldeformular, Spamschutz-Feld.
 - FAQ, Impressum, Datenschutz.
-- Im Footer „Webseite erstellt von“ mit AVA-DAM Logo, verlinkt auf https://dmuccios24-oss.github.io/avadam/
+- Im Footer „Webseite erstellt von“ mit AVA-DAM Logo, verlinkt auf https://avadam26.github.io/avadam/
 
 ## Noch offen
 
