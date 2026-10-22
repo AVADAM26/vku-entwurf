@@ -43,7 +43,7 @@ Reines HTML, CSS und JavaScript, kein Build-Schritt. Änderungen direkt in den D
 - Foto von Cornelia Zumbrunn: Bis jetzt gibt es nur ein Bild ihres Fahrschulautos, das steht vorläufig auf ihrer Karte.
 - Kontaktangaben im Impressum (Platzhalter in eckigen Klammern).
 - Echte Kursdaten statt Beispielterminen.
-- Hinweis „Neu ab 1. Januar 2027“ (VKU vor der Theorieprüfung) steht über den Kurskarten, verlinkt aufs ASTRA. Sobald die MFK Basel-Landschaft ihre VKU-Seite nachgeführt hat, Link dorthin umstellen. Ab 2027 auch VKU-Kurstext und FAQ „Was brauche ich, um den VKU zu besuchen?“ anpassen (dort steht noch: zuerst Lernfahrausweis). Ab welchem Alter man den VKU ab 2027 besuchen darf, klärt Daniel noch ab.
+- Hinweis „Neu ab 1. Januar 2027“ (VKU vor der Theorieprüfung) steht über den Kurskarten, verlinkt aufs ASTRA. Sobald die MFK Basel-Landschaft ihre VKU-Seite nachgeführt hat, Link dorthin umstellen. Die FAQ sind auf die neue Regel angepasst (bis Ende 2026 alt, ab 2027 neu), offene Punkte als Platzhalter. Ab 2027 noch den VKU-Kurstext in der Kurskarte anpassen (dort steht noch: zuerst Lernfahrausweis). Ab welchem Alter man den VKU ab 2027 besuchen darf, klärt Daniel noch ab.
 - Anmeldeformular verschickt noch nichts. Für den echten Betrieb braucht es einen Versanddienst oder ein Backend.
 - Laut Auftrag soll jeder Fahrlehrer ein eigenes Login bekommen, und alle sollen alle Kurstermine bearbeiten können. Im statischen Entwurf noch nicht umgesetzt.
 - Hosting und Domain entscheiden die neun Fahrlehrer (Favorit: Hostpoint und vku-oberbaselbiet.ch).
