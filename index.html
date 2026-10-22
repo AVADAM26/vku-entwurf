@@ -41,6 +41,9 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 @keyframes shake{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(-1.5px,1px) rotate(-2deg)}50%{transform:translate(1.5px,0) rotate(2deg)}75%{transform:translate(-1px,-1px) rotate(-1deg)}100%{transform:translate(0,0) rotate(0)}}
 .topcar:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
 .ph{background:var(--accent);color:var(--accentInk);padding:0 4px;border-radius:4px}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.team-grid{grid-template-columns:1fr}}
 .faq{border-top:1px solid var(--line)}
 .faq:last-child{border-bottom:1px solid var(--line)}
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;min-height:44px;font-size:19px;font-weight:600}
@@ -212,9 +215,9 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
 <h2 class="serif" style="margin: 0 0 12px; font-size: clamp(40px, 5vw, 64px); line-height: 1">Deine Fahrlehrer.</h2>
 <p style="margin: 0 0 48px; font-size: 18px; color: var(--muted); max-width: 52ch">Neun Fahrlehrer aus der Region, ein gemeinsames Kursangebot.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px">
+<div class="team-grid">
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/rahel-schaffner.jpg" alt="Rahel Schaffner" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 40% 50%; background: var(--line)">
+<img src="bilder/rahel-schaffner.jpg" alt="Rahel Schaffner" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 40% 50%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Rahel Schaffner</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Rahels Fahrschule</p>
@@ -223,7 +226,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 </article>
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/ken-klauser.jpg" alt="Ken Klauser" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; background: var(--line)">
+<img src="bilder/ken-klauser.jpg" alt="Ken Klauser" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 20%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Ken Klauser</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Catch Ken, Basel</p>
@@ -232,7 +235,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 </article>
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/dominic-imhof.jpg" alt="Dominic Imhof" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; background: var(--line)">
+<img src="bilder/dominic-imhof.jpg" alt="Dominic Imhof" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Dominic Imhof</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Dominic Imhof</p>
@@ -241,7 +244,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 </article>
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/georg-schweingruber.jpg" alt="Georg Schweingruber" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 60% 30%; background: var(--line)">
+<img src="bilder/georg-schweingruber.jpg" alt="Georg Schweingruber" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 60% 30%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Georg Schweingruber</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Schweingruber</p>
@@ -250,7 +253,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 </article>
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/christian-wuethrich.jpg" alt="Christian Wüthrich" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 64% 30%; background: var(--line)">
+<img src="bilder/christian-wuethrich.jpg" alt="Christian Wüthrich" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 64% 30%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Christian Wüthrich</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Böbbi’s Fahrschuel, Gelterkinden</p>
@@ -259,7 +262,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 </article>
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/thomas-egenter.jpg" alt="Thomas Egenter" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 78% 40%; background: var(--line)">
+<img src="bilder/thomas-egenter.jpg" alt="Thomas Egenter" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 78% 40%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Thomas Egenter</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Egi’s Fahrschuel, Gelterkinden</p>
@@ -268,7 +271,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 </article>
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/roger-schreiber.jpg" alt="Roger Schreiber" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; background: var(--line)">
+<img src="bilder/roger-schreiber.jpg" alt="Roger Schreiber" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Roger Schreiber</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Schreiber, Gelterkinden</p>
@@ -277,7 +280,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 </article>
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/thomas-stuck.jpg" alt="Thomas Stuck" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 76% 20%; background: var(--line)">
+<img src="bilder/thomas-stuck.jpg" alt="Thomas Stuck" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 76% 20%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Thomas Stuck</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Stuck, Niederdorf</p>
@@ -286,7 +289,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 </article>
 <article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
-<img src="bilder/cornelia-zumbrunn.jpg" alt="Fahrschulauto von Cornelia Zumbrunn" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 52% 50%; background: var(--line)">
+<img src="bilder/cornelia-zumbrunn.jpg" alt="Fahrschulauto von Cornelia Zumbrunn" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 52% 50%; background: var(--line)">
 <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Cornelia Zumbrunn</h3>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Fahrschule Zumbrunn</p>
