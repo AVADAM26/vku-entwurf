@@ -55,4 +55,8 @@ Reines HTML, CSS und JavaScript, kein Build-Schritt. Änderungen direkt in den D
 - **Schreibstil:** Schweizer Schreibweise, immer „ss“, nie „ß“. Per Du, freundlich, direkt, einfache Sätze, kein Werbe-Deutsch.
 - Jede Änderung auf dem Handy und am Computer, hell und dunkel prüfen. Nichts darf seitlich überstehen.
 - Vor dem Arbeiten `git pull`, kleine Commits mit deutscher Beschreibung.
-- **Commits mit Daniels Konto** immer als `scotlandbydan` mit der Noreply-Adresse `317312833+dmuccios24-oss@users.noreply.github.com`, nie mit seiner Gmail-Adresse. Sonst blockt GitHub den Push. Gilt in allen Projekten.
+- **Commits immer im Namen der Person, die gerade arbeitet**, nie nur als „claude“. Nur so erscheint sie auf GitHub bei den Contributors. Vor dem ersten Commit `git config user.name` und `git config user.email` im Repo entsprechend setzen. Ist unklar, wer arbeitet, kurz fragen.
+  - Dani: `scotlandbydan` mit der Noreply-Adresse `317312833+dmuccios24-oss@users.noreply.github.com`, nie mit seiner Gmail-Adresse. Sonst blockt GitHub den Push.
+  - Adi: `f5yct67kcv-source` mit der Noreply-Adresse `284693819+f5yct67kcv-source@users.noreply.github.com`, nicht mit seiner Apple-Relay-Adresse.
+  - Gilt in allen Projekten.
+- **Arbeit am Ende jeder Sitzung in `main` zurückführen.** Cloud-Sitzungen (claude.ai/code, Handy, Desktop „Cloud“) arbeiten auf einem eigenen Zweig `claude/…`. Bevor die Sitzung endet: `git pull origin main`, Konflikte lösen, dann in `main` übernehmen und hochladen. Sonst bleibt die Arbeit liegen und kommt nie auf die Seite. Nur wenn Adi oder Dani ausdrücklich zuerst prüfen wollen, stattdessen einen Pull Request machen und Bescheid geben. Gilt in allen Projekten.
