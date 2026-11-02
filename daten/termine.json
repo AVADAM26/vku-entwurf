@@ -26,8 +26,8 @@
     ],
     "zeit": "18:30–20:30",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 12,
+    "belegt": 10
   },
   {
     "id": "t003",
@@ -41,8 +41,8 @@
     ],
     "zeit": "18:30–20:30",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 12,
+    "belegt": 4
   },
   {
     "id": "t004",
@@ -54,8 +54,8 @@
     ],
     "zeit": "",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 10,
+    "belegt": 7
   },
   {
     "id": "t005",
@@ -95,8 +95,8 @@
     ],
     "zeit": "19:00–21:00",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 12,
+    "belegt": 11
   },
   {
     "id": "t008",
@@ -110,8 +110,8 @@
     ],
     "zeit": "19:00–21:00",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 12,
+    "belegt": 2
   },
   {
     "id": "t009",
@@ -138,8 +138,8 @@
     ],
     "zeit": "",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 10,
+    "belegt": 9
   },
   {
     "id": "t011",
@@ -194,8 +194,8 @@
     ],
     "zeit": "19:00–21:00",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 8,
+    "belegt": 8
   },
   {
     "id": "t015",
@@ -209,8 +209,8 @@
     ],
     "zeit": "19:00–21:00",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 8,
+    "belegt": 5
   },
   {
     "id": "t016",
@@ -222,8 +222,8 @@
     ],
     "zeit": "",
     "ausgebucht": false,
-    "plaetze": null,
-    "belegt": 0
+    "plaetze": 10,
+    "belegt": 10
   },
   {
     "id": "t017",
