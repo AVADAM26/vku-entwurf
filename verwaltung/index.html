@@ -83,7 +83,7 @@ h1{margin:0 0 8px;font-size:clamp(36px,5vw,56px);line-height:1}
 <section id="login" hidden>
 <div class="login karte">
 <h1 class="serif">Verwaltung.</h1>
-<p style="margin:0;color:var(--muted);line-height:1.5">Hier pflegt ihr Termine, Lokale, Fahrlehrer und Preise. Melde dich mit deinem Login an.</p>
+<p style="margin:0;color:var(--muted);line-height:1.5">Hier pflegt ihr Termine, Lokale und Preise. Melde dich mit deinem Login an.</p>
 <form id="login-form" style="display:flex;flex-direction:column;gap:14px">
 <label>Benutzername<input type="text" name="benutzer" autocomplete="username" required></label>
 <label>Passwort<input type="password" name="passwort" autocomplete="current-password" required></label>
@@ -104,7 +104,6 @@ h1{margin:0 0 8px;font-size:clamp(36px,5vw,56px);line-height:1}
 <div class="reiter" role="tablist">
 <button type="button" role="tab" aria-selected="true" data-reiter="termine">Termine</button>
 <button type="button" role="tab" aria-selected="false" data-reiter="lokale">Lokale</button>
-<button type="button" role="tab" aria-selected="false" data-reiter="fahrlehrer">Fahrlehrer</button>
 <button type="button" role="tab" aria-selected="false" data-reiter="kurse">Preise</button>
 </div>
 
@@ -122,10 +121,6 @@ h1{margin:0 0 8px;font-size:clamp(36px,5vw,56px);line-height:1}
 <div id="lokale-liste" class="liste"></div>
 </div>
 
-<div id="reiter-fahrlehrer" role="tabpanel" hidden>
-<p class="klein" style="margin:0 0 16px">Kurzportrait: höchstens fünf Sätze, per Du. Die vier Fragen: Was ist dir beim Unterrichten wichtig? Welches Auto, Schaltung oder Automat, welche Kategorien? Welche Region? Etwas Persönliches. Der Bildausschnitt steht als «x% y%», zum Beispiel «50% 30%», damit das Gesicht im Bild bleibt.</p>
-<div id="fahrlehrer-liste" class="liste"></div>
-</div>
 
 <div id="reiter-kurse" role="tabpanel" hidden>
 <p class="klein" style="margin:0 0 16px">Preis ohne «CHF», zum Beispiel 220.00. Leer lassen zeigt «CHF XX.XX».</p>

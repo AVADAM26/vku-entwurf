@@ -34,7 +34,7 @@ daten/            Inhalte, die oft ändern, als JSON (siehe «Datendateien und V
   kurse.json        Kurse (VKU, Nothelfer) mit Preis
   termine.json      Kurstermine: Lokal, Kurs, Tage, Zeit, ausgebucht
   fahrlehrer.json   Fahrlehrer mit Fahrschule, Kurzportrait, Link, Foto, Bildausschnitt
-verwaltung/       Mini-CMS für die Fahrlehrer (Login, bearbeitet daten/*.json) und Versand der Anmeldungen
+verwaltung/       Mini-CMS für die Fahrlehrer (Login, bearbeitet termine, lokale, kurse) und Versand der Anmeldungen
   index.html        Oberfläche, gleiches Design wie die Seite
   verwaltung.js     Logik der Oberfläche
   api.php           Login und Speichern (PHP, läuft auf Hostpoint, nicht auf GitHub Pages)
@@ -46,7 +46,7 @@ robots.txt        sperrt im Entwurf alles
 .gitignore        hält benutzer.php, konfig.php und daten/sicherung/ aus dem Repository
 ```
 
-Reines HTML, CSS und JavaScript, kein Build-Schritt. Änderungen an Texten und Design direkt in den Dateien, Änderungen an Terminen, Lokalen, Fahrlehrern und Preisen über die Verwaltung oder direkt in `daten/*.json`.
+Reines HTML, CSS und JavaScript, kein Build-Schritt. Änderungen an Texten und Design direkt in den Dateien, Änderungen an Terminen, Lokalen und Preisen über die Verwaltung oder direkt in `daten/*.json`, Fahrlehrer-Portraits nur direkt in `daten/fahrlehrer.json`.
 
 ## Datendateien und Verwaltung
 
@@ -55,7 +55,7 @@ Entschieden am 2. November 2026 (Adi), gebaut mit Claude, vor dem Call mit den F
 - **Warum:** Termine, Preise, Adressen und Portraits ändern oft. Vorher standen die Termine dreimal im HTML, jede Änderung war Handarbeit in drei Karten. Jetzt gibt es eine Stelle pro Inhalt, und die Fahrlehrer können sie selbst pflegen.
 - **Wie die Seite rendert:** `app.js` lädt die vier JSON-Dateien und baut daraus die Lokal-Karten mit Terminen, die Fahrlehrer-Karten, die Zahlen oben («9 Fahrlehrer · 3 Lokale», «Neun Fahrlehrer») und die Preise. Die statischen Stücke im HTML (Hero, Kurskarten, FAQ, Formular) bleiben HTML.
 - **Termine:** Ein Termin hat Lokal, Kurs, eine Liste von Kurstagen (ISO-Datum) und eine Zeit. Die Seite macht daraus die bekannte Zeile: vier Tage am Stück «Mo 26.10. – Do 29.10., 18:30–20:30», zwei Tage «Fr 06.11. + Sa 07.11.», Tage mit Lücken «Di 06.10. – Do 15.10., Di + Do 19:00–21:00». Vergangene Termine (letzter Tag vor heute) blendet die Seite von selbst aus, pro Lokal und Kurs erscheinen die nächsten drei. `ausgebucht: true` zeigt «Ausgebucht» statt «Anmelden». Die Beispieltermine haben Jahreszahlen bekommen (Oktober bis Dezember 2026, Januar 2027); die vom Oktober sind darum heute schon unsichtbar.
-- **Verwaltung (`verwaltung/`):** Reiter Termine, Lokale, Fahrlehrer, Preise. Jeder Fahrlehrer hat ein eigenes Login, alle dürfen alles bearbeiten (Entscheid der Fahrlehrer, siehe «Logins»). Speichern schreibt die JSON-Datei, legt vorher eine Sicherungskopie in `daten/sicherung/` an (die letzten 30 pro Datei) und schreibt ins Protokoll, wer wann gespeichert hat. Was gespeichert ist, steht sofort auf der Seite, ohne Deploy.
+- **Verwaltung (`verwaltung/`):** Reiter Termine, Lokale, Preise. Die Fahrlehrer-Portraits (`daten/fahrlehrer.json`) sind bewusst nicht in der Verwaltung (Adi, 2. November 2026): Texte, Fotos und Reihenfolge pflegt AVADAM, damit die Karten einheitlich bleiben; der Server nimmt für diese Datei kein Speichern über `api.php` an. Jeder Fahrlehrer hat ein eigenes Login, alle dürfen alles bearbeiten (Entscheid der Fahrlehrer, siehe «Logins»). Speichern schreibt die JSON-Datei, legt vorher eine Sicherungskopie in `daten/sicherung/` an (die letzten 30 pro Datei) und schreibt ins Protokoll, wer wann gespeichert hat. Was gespeichert ist, steht sofort auf der Seite, ohne Deploy.
 - **Ohne PHP, zum Beispiel auf GitHub Pages:** Die Seite selbst läuft vollständig (JSON wird statisch geladen). Die Verwaltung öffnet sich im **Vorschau-Modus** mit gelbem Hinweis: alles lässt sich anfassen, «Speichern» lädt die geänderte JSON-Datei herunter, statt sie zu schreiben. Damit lässt sich die Verwaltung auf der Vorschau zeigen. Das Formular zeigt dann wie bisher nur die Dankes-Meldung.
 - **Auf Hostpoint einrichten:** `verwaltung/benutzer.beispiel.php` nach `benutzer.php` kopieren und pro Fahrlehrer Benutzername und Passwort-Hash eintragen (Hash über `verwaltung/passwort.php` erzeugen, diese Seite danach löschen). `konfig.beispiel.php` nach `konfig.php` kopieren: Empfängeradresse für Anmeldungen, Absender, Text der Bestätigung. Der Webserver muss in `daten/` schreiben dürfen. Beide echten Dateien bleiben auf dem Server und kommen nie ins Repository.
 - **Anmeldeformular:** prüft Pflichtfelder und die Datenschutz-Checkbox im Browser und meldet, was fehlt. Mit PHP schickt es die Anmeldung als E-Mail an die Fahrlehrer (Reply-To ist die Adresse der angemeldeten Person) und eine Bestätigung an die Person. Neu gibt es dafür ein Feld **E-Mail** (Entscheid Adi, 2. November 2026); die Datenschutzerklärung führt die E-Mail-Adresse auf.

@@ -3,7 +3,7 @@
 (function () {
   var site = document.getElementById('site');
   var API = 'api.php';
-  var SAMMLUNGEN = ['termine', 'lokale', 'fahrlehrer', 'kurse'];
+  var SAMMLUNGEN = ['termine', 'lokale', 'kurse'];   // fahrlehrer.json pflegt AVADAM direkt, nicht die Verwaltung
   var daten = {};        // aktueller Stand pro Sammlung
   var original = {};     // Stand beim Laden, für «Verwerfen» und «geändert?»
   var token = '';
@@ -191,41 +191,6 @@
     renderLokale(); fussZeigen();
   });
 
-  // ---------- Fahrlehrer ----------
-  function renderFahrlehrer() {
-    $('fahrlehrer-liste').innerHTML = daten.fahrlehrer.map(function (f, i, arr) {
-      return '<div class="eintrag" data-id="' + esc(f.id) + '"><div class="titel"><strong>' + esc(f.name) + '</strong>' +
-        '<span style="display:flex;gap:6px"><button type="button" class="btn ghost klein" data-schieben="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="Nach oben">↑</button>' +
-        '<button type="button" class="btn ghost klein" data-schieben="1"' + (i === arr.length - 1 ? ' disabled' : '') + ' aria-label="Nach unten">↓</button></span></div>' +
-        '<div class="raster">' +
-        '<label>Name<input type="text" data-feld="name" value="' + esc(f.name) + '"></label>' +
-        '<label>Fahrschule<input type="text" data-feld="fahrschule" value="' + esc(f.fahrschule) + '"></label>' +
-        '<label>Link<input type="url" data-feld="link" value="' + esc(f.link) + '"></label>' +
-        '<label>Linktext<input type="text" data-feld="linktext" value="' + esc(f.linktext) + '"></label>' +
-        '<label>Foto <span class="klein">Pfad im Ordner bilder</span><input type="text" data-feld="foto" value="' + esc(f.foto) + '"></label>' +
-        '<label>Bildausschnitt<input type="text" data-feld="fokus" value="' + esc(f.fokus) + '" placeholder="50% 50%"></label>' +
-        '</div>' +
-        '<label>Kurzportrait<textarea data-feld="portrait">' + esc(f.portrait) + '</textarea></label>' +
-        '</div>';
-    }).join('');
-  }
-  $('fahrlehrer-liste').addEventListener('change', function (e) {
-    var id = e.target.closest('.eintrag').getAttribute('data-id');
-    var f = daten.fahrlehrer.filter(function (x) { return x.id === id; })[0];
-    f[e.target.getAttribute('data-feld')] = e.target.value.trim();
-    if (e.target.getAttribute('data-feld') === 'name') f.fotoalt = f.name;
-    renderFahrlehrer(); fussZeigen();
-  });
-  $('fahrlehrer-liste').addEventListener('click', function (e) {
-    var b = e.target.closest('[data-schieben]'); if (!b) return;
-    var id = b.closest('.eintrag').getAttribute('data-id');
-    var i = daten.fahrlehrer.map(function (x) { return x.id; }).indexOf(id);
-    var j = i + (+b.getAttribute('data-schieben'));
-    if (j < 0 || j >= daten.fahrlehrer.length) return;
-    var tmp = daten.fahrlehrer[i]; daten.fahrlehrer[i] = daten.fahrlehrer[j]; daten.fahrlehrer[j] = tmp;
-    renderFahrlehrer(); fussZeigen();
-  });
-
   // ---------- Kurse / Preise ----------
   function renderKurse() {
     $('kurse-liste').innerHTML = daten.kurse.map(function (k) {
@@ -240,7 +205,7 @@
     renderKurse(); fussZeigen();
   });
 
-  function renderAlles() { renderTermine(); renderLokale(); renderFahrlehrer(); renderKurse(); fussZeigen(); }
+  function renderAlles() { renderTermine(); renderLokale(); renderKurse(); fussZeigen(); }
 
   // ---------- Speichern ----------
   function speichern() {

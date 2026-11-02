@@ -9,7 +9,7 @@ header('X-Content-Type-Options: nosniff');
 
 $datenOrdner = dirname(__DIR__) . '/daten';
 $sicherungOrdner = $datenOrdner . '/sicherung';
-$sammlungen = ['termine', 'lokale', 'fahrlehrer', 'kurse'];
+$sammlungen = ['termine', 'lokale', 'kurse'];   // fahrlehrer.json wird nicht über die Verwaltung geschrieben
 
 function antwort(array $a, int $status = 200): void {
     http_response_code($status);
@@ -86,7 +86,6 @@ switch ($aktion) {
         $pflicht = [
             'termine' => ['id', 'lokal', 'kurs', 'tage'],
             'lokale' => ['id', 'name'],
-            'fahrlehrer' => ['id', 'name'],
             'kurse' => ['id', 'name', 'titel'],
         ][$sammlung];
         $ids = [];
