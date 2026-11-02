@@ -1,0 +1,218 @@
+[
+  {
+    "id": "t001",
+    "lokal": "gelterkinden",
+    "kurs": "vku",
+    "tage": [
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29"
+    ],
+    "zeit": "18:30–20:30",
+    "ausgebucht": false
+  },
+  {
+    "id": "t002",
+    "lokal": "gelterkinden",
+    "kurs": "vku",
+    "tage": [
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25",
+      "2026-11-26"
+    ],
+    "zeit": "18:30–20:30",
+    "ausgebucht": false
+  },
+  {
+    "id": "t003",
+    "lokal": "gelterkinden",
+    "kurs": "vku",
+    "tage": [
+      "2026-12-14",
+      "2026-12-15",
+      "2026-12-16",
+      "2026-12-17"
+    ],
+    "zeit": "18:30–20:30",
+    "ausgebucht": false
+  },
+  {
+    "id": "t004",
+    "lokal": "gelterkinden",
+    "kurs": "nothelfer",
+    "tage": [
+      "2026-11-06",
+      "2026-11-07"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  },
+  {
+    "id": "t005",
+    "lokal": "gelterkinden",
+    "kurs": "nothelfer",
+    "tage": [
+      "2026-12-04",
+      "2026-12-05"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  },
+  {
+    "id": "t006",
+    "lokal": "gelterkinden",
+    "kurs": "nothelfer",
+    "tage": [
+      "2027-01-08",
+      "2027-01-09"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  },
+  {
+    "id": "t007",
+    "lokal": "liestal",
+    "kurs": "vku",
+    "tage": [
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05"
+    ],
+    "zeit": "19:00–21:00",
+    "ausgebucht": false
+  },
+  {
+    "id": "t008",
+    "lokal": "liestal",
+    "kurs": "vku",
+    "tage": [
+      "2026-11-30",
+      "2026-12-01",
+      "2026-12-02",
+      "2026-12-03"
+    ],
+    "zeit": "19:00–21:00",
+    "ausgebucht": false
+  },
+  {
+    "id": "t009",
+    "lokal": "liestal",
+    "kurs": "vku",
+    "tage": [
+      "2027-01-11",
+      "2027-01-12",
+      "2027-01-13",
+      "2027-01-14"
+    ],
+    "zeit": "19:00–21:00",
+    "ausgebucht": false
+  },
+  {
+    "id": "t010",
+    "lokal": "liestal",
+    "kurs": "nothelfer",
+    "tage": [
+      "2026-11-13",
+      "2026-11-14"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  },
+  {
+    "id": "t011",
+    "lokal": "liestal",
+    "kurs": "nothelfer",
+    "tage": [
+      "2026-12-11",
+      "2026-12-12"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  },
+  {
+    "id": "t012",
+    "lokal": "liestal",
+    "kurs": "nothelfer",
+    "tage": [
+      "2027-01-15",
+      "2027-01-16"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  },
+  {
+    "id": "t013",
+    "lokal": "oberdorf",
+    "kurs": "vku",
+    "tage": [
+      "2026-10-06",
+      "2026-10-08",
+      "2026-10-13",
+      "2026-10-15"
+    ],
+    "zeit": "19:00–21:00",
+    "ausgebucht": false
+  },
+  {
+    "id": "t014",
+    "lokal": "oberdorf",
+    "kurs": "vku",
+    "tage": [
+      "2026-11-03",
+      "2026-11-05",
+      "2026-11-10",
+      "2026-11-12"
+    ],
+    "zeit": "19:00–21:00",
+    "ausgebucht": false
+  },
+  {
+    "id": "t015",
+    "lokal": "oberdorf",
+    "kurs": "vku",
+    "tage": [
+      "2026-12-01",
+      "2026-12-03",
+      "2026-12-08",
+      "2026-12-10"
+    ],
+    "zeit": "19:00–21:00",
+    "ausgebucht": false
+  },
+  {
+    "id": "t016",
+    "lokal": "oberdorf",
+    "kurs": "nothelfer",
+    "tage": [
+      "2026-11-20",
+      "2026-11-21"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  },
+  {
+    "id": "t017",
+    "lokal": "oberdorf",
+    "kurs": "nothelfer",
+    "tage": [
+      "2026-12-18",
+      "2026-12-19"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  },
+  {
+    "id": "t018",
+    "lokal": "oberdorf",
+    "kurs": "nothelfer",
+    "tage": [
+      "2027-01-22",
+      "2027-01-23"
+    ],
+    "zeit": "",
+    "ausgebucht": false
+  }
+]

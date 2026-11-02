@@ -1,0 +1,101 @@
+[
+  {
+    "id": "rahel-schaffner",
+    "name": "Rahel Schaffner",
+    "fahrschule": "Rahels Fahrschule",
+    "portrait": "[Kurzportrait folgt]",
+    "link": "https://www.facebook.com/profile.php?id=61575925460231",
+    "linktext": "Zu Facebook",
+    "foto": "bilder/rahel-schaffner.jpg",
+    "fotoalt": "Rahel Schaffner",
+    "fokus": "40% 50%"
+  },
+  {
+    "id": "ken-klauser",
+    "name": "Ken Klauser",
+    "fahrschule": "Catch Ken, Basel",
+    "portrait": "Ich bin Ken Klauser, Fahrlehrer mit eidgenössischem Fachausweis aus dem Kanton Baselland. Der Weg zum Führerausweis ist für viele ein grosser Schritt, und genau dabei begleite ich dich mit Geduld, Fachwissen und einem klar strukturierten Ausbildungsplan. Weil alle anders lernen, passe ich meine Fahrstunden individuell an, damit du dich wohlfühlst und selbstbewusst ans Steuer gehst. Mit der Qualidrive-App hast du deinen Lernstand, deine Fahrstunden und Rechnungen jederzeit dabei. Gemeinsam erreichen wir dein Ziel, die Fahrprüfung und ein sicheres Gefühl im Strassenverkehr.",
+    "link": "https://www.catch-ken.ch/",
+    "linktext": "Zur Webseite",
+    "foto": "bilder/ken-klauser.jpg",
+    "fotoalt": "Ken Klauser",
+    "fokus": "50% 20%"
+  },
+  {
+    "id": "dominic-imhof",
+    "name": "Dominic Imhof",
+    "fahrschule": "Fahrschule Dominic Imhof",
+    "portrait": "Ich bin Dominic Imhof und wohne mit meiner Familie in Lausen BL. Nach meiner Lehre als Informatiker EFZ habe ich berufsbegleitend die Ausbildung zum Fahrlehrer mit eidgenössischem Fachausweis gemacht und im September 2023 abgeschlossen. Unterwegs bin ich in der Region Basel, Liestal und Sissach. Ausserdem bin ich Mitglied im Aargauer Fahrlehrerverband AFV.",
+    "link": "https://www.dominicimhof.ch/",
+    "linktext": "Zur Webseite",
+    "foto": "bilder/dominic-imhof.jpg",
+    "fotoalt": "Dominic Imhof",
+    "fokus": "50% 30%"
+  },
+  {
+    "id": "georg-schweingruber",
+    "name": "Georg Schweingruber",
+    "fahrschule": "Fahrschule Schweingruber",
+    "portrait": "[Kurzportrait folgt]",
+    "link": "http://fahrschule-schweingruber.ch/",
+    "linktext": "Zur Webseite",
+    "foto": "bilder/georg-schweingruber.jpg",
+    "fotoalt": "Georg Schweingruber",
+    "fokus": "60% 30%"
+  },
+  {
+    "id": "christian-wuethrich",
+    "name": "Christian Wüthrich",
+    "fahrschule": "Böbbi’s Fahrschuel, Gelterkinden",
+    "portrait": "Ich bin Christian Wüthrich, aufgewachsen in Gelterkinden und seit 2007 staatlich geprüfter Fahrlehrer. Vielleicht kennst du mich auch als Komiker «dr Hugi», mit dem ich jahrelang auf Schweizer Bühnen unterwegs war. In meiner Freizeit bin ich bei Familie und Freunden, trainiere unser Frauen-Team in der 3. Liga und stehe auf dem Tennisplatz, auch wenn aus mir kein Roger Federer mehr wird. Deine Fahrstunden machst du bei mir im Mazda CX-30 mit Automatik, und ich verspreche dir, du wirst ihn lieben!",
+    "link": "https://www.boebbis-fahrschuel.ch/",
+    "linktext": "Zur Webseite",
+    "foto": "bilder/christian-wuethrich.jpg",
+    "fotoalt": "Christian Wüthrich",
+    "fokus": "64% 30%"
+  },
+  {
+    "id": "thomas-egenter",
+    "name": "Thomas Egenter",
+    "fahrschule": "Egi’s Fahrschuel, Gelterkinden",
+    "portrait": "Ich bin Thomas Egenter, kurz Thomi. Bei mir lernst du in freundschaftlicher und lockerer Atmosphäre, sicher im heutigen Strassenverkehr unterwegs zu sein, denn Autofahren soll Spass machen. Ich bringe dir auf dem schnellsten Weg alles bei, was du brauchst, und ganz nebenbei bestehst du dann auch die Führerprüfung. Für Senioren und Wiedereinsteiger biete ich Feedback-Fahrten an, wenn du Fragen zu neuen Regeln hast oder einfach eine Rückmeldung zu deinem Fahrstil möchtest.",
+    "link": "http://www.egis-fahrschuel.ch/",
+    "linktext": "Zur Webseite",
+    "foto": "bilder/thomas-egenter.jpg",
+    "fotoalt": "Thomas Egenter",
+    "fokus": "78% 40%"
+  },
+  {
+    "id": "roger-schreiber",
+    "name": "Roger Schreiber",
+    "fahrschule": "Fahrschule Schreiber, Gelterkinden",
+    "portrait": "[Kurzportrait folgt]",
+    "link": "https://www.fahrschule-schreiber.ch/",
+    "linktext": "Zur Webseite",
+    "foto": "bilder/roger-schreiber.jpg",
+    "fotoalt": "Roger Schreiber",
+    "fokus": "50% 30%"
+  },
+  {
+    "id": "thomas-stuck",
+    "name": "Thomas Stuck",
+    "fahrschule": "Fahrschule Stuck, Niederdorf",
+    "portrait": "Auto, Anhänger und Motorrad. [Kurzportrait folgt]",
+    "link": "https://fahrschule-stuck.ch/",
+    "linktext": "Zur Webseite",
+    "foto": "bilder/thomas-stuck.jpg",
+    "fotoalt": "Thomas Stuck",
+    "fokus": "76% 20%"
+  },
+  {
+    "id": "cornelia-zumbrunn",
+    "name": "Cornelia Zumbrunn",
+    "fahrschule": "Fahrschule Zumbrunn",
+    "portrait": "[Kurzportrait folgt]",
+    "link": "https://www.fahrschule-zumbrunn.ch/",
+    "linktext": "Zur Webseite",
+    "foto": "bilder/cornelia-zumbrunn.jpg",
+    "fotoalt": "Fahrschulauto von Cornelia Zumbrunn",
+    "fokus": "52% 50%"
+  }
+]

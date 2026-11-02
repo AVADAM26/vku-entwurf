@@ -1,0 +1,23 @@
+[
+  {
+    "id": "gelterkinden",
+    "name": "Gelterkinden",
+    "adresse": "Schulgasse 3, 4460 Gelterkinden",
+    "hinweis": "Nähe Dorfplatz, direkt neben Schaub-Wohndesign",
+    "foto": ""
+  },
+  {
+    "id": "liestal",
+    "name": "Liestal",
+    "adresse": "",
+    "hinweis": "",
+    "foto": ""
+  },
+  {
+    "id": "oberdorf",
+    "name": "Oberdorf",
+    "adresse": "Hauptstrasse 72, 4436 Oberdorf",
+    "hinweis": "",
+    "foto": ""
+  }
+]
