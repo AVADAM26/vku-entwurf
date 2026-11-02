@@ -110,9 +110,11 @@
           var knopf = voll
             ? '<span style="font-size: 14px; font-weight: 600; color: var(--muted); white-space: nowrap">Ausgebucht</span>'
             : '<button type="button" class="pick" data-action="pick" data-kurs="' + esc(wahl) + '" data-termin="' + esc(t.id) + '">Anmelden</button>';
-          // Knappheit nur zeigen, wenn sie echt ist: ab drei freien Plätzen und weniger.
-          var hinweisFrei = !voll && frei !== null && frei <= 3
-            ? '<span style="display: block; font-size: 13px; color: var(--muted); margin-top: 2px">Noch ' + frei + (frei === 1 ? ' Platz' : ' Plätze') + '</span>'
+          // Freie Plätze immer zeigen, sobald ein Maximum gesetzt ist, damit auch zwei Leute, die
+          // zusammen kommen wollen, rechtzeitig sehen, ob es für beide reicht. Stufe nach Knappheit.
+          var stufe = frei === 1 ? 'letzter' : frei <= 3 ? 'knapp' : 'ok';
+          var hinweisFrei = !voll && frei !== null
+            ? '<span class="frei frei-' + stufe + '"><i aria-hidden="true"></i>Noch ' + frei + (frei === 1 ? ' Platz' : ' Plätze') + '</span>'
             : '';
           return '<div class="slot"><span style="font-size: 15px">' + esc(text) + hinweisFrei + '</span>' + knopf + '</div>';
         }).join('') : '<div class="slot"><span style="font-size: 15px; color: var(--muted)">Neue Termine folgen</span></div>';
