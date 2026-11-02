@@ -9,11 +9,16 @@
 <style>
 body{margin:0}
 [hidden]{display:none !important}
-.site{--bg:#FBFAF7;--surface:#FFFFFF;--line:#E6E2DA;--ink:#17171A;--muted:#5C5A57;--accent:#F2B807;--accentInk:#17171A;--soft:#F3F0E9;
+.site{--bg:#FBFAF7;--surface:#FFFFFF;--line:#E6E2DA;--ink:#17171A;--muted:#5C5A57;--accent:#0055A4;--accentInk:#FFFFFF;--soft:#F3F0E9;
   background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;transition:background .3s,color .3s}
-.site.dark{--bg:#0F1012;--surface:#181A1D;--line:#2A2D31;--ink:#F2F1EE;--muted:#A8A6A1;--accent:#F5C531;--accentInk:#111111;--soft:#1D2024}
+.site.dark{--bg:#0F1012;--surface:#181A1D;--line:#2A2D31;--ink:#F2F1EE;--muted:#A8A6A1;--accent:#2F6BC8;--accentInk:#FFFFFF;--soft:#1D2024}
 a{color:var(--ink)}a:hover{color:var(--muted)}
-.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+/* Titel ohne Serifen (Wunsch der Fahrlehrer/innen, 2. November 2026). Drei Titel zeigen je eine Schrift zur Auswahl. */
+.serif{font-family:"Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
+.t-haupt{font-family:"Montserrat","Hanken Grotesk",system-ui,sans-serif;font-weight:800;letter-spacing:-0.025em}
+.t-kurs{font-family:"Archivo","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.01em}
+.t-lokale{font-family:"Space Grotesk","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
+.neu-2027 a{color:#FFFFFF}.neu-2027 a:hover{color:#FFFFFF;opacity:.8}
 input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-height:48px;box-sizing:border-box;width:100%}
 input:focus{outline:2px solid var(--accent);outline-offset:1px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:none;background:var(--ink);color:var(--bg);font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
@@ -52,9 +57,9 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 }
 .frei{display:block;font-size:13px;color:var(--muted);margin-top:3px}
 .frei i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px;background:var(--gruen)}
-.frei-knapp{color:var(--ink)}.frei-knapp i{background:var(--accent)}
+.frei-knapp{color:var(--ink)}.frei-knapp i{background:var(--gelb)}
 .frei-letzter{color:var(--rot);font-weight:600}.frei-letzter i{background:var(--rot)}
-.site{--gruen:#2E8B57;--rot:#B42318}.site.dark{--gruen:#5BD08A;--rot:#F97066}
+.site{--gruen:#2E8B57;--gelb:#F2B807;--rot:#B42318}.site.dark{--gruen:#5BD08A;--rot:#F97066}
 .team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 @media (max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.team-grid{grid-template-columns:1fr}}
@@ -87,10 +92,10 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <nav class="nav-desk" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
 <a class="navlink" href="#kurse">Kurse</a>
 <a class="navlink" href="#lokale">Lokale</a>
-<a class="navlink" href="#team">Fahrlehrer</a>
+<a class="navlink" href="#team">Fahrlehrer/innen</a>
 <a class="navlink" href="#faq">FAQ</a>
 <a class="navlink" href="#anmeldung">Anmeldung</a>
-<a class="navlink" href="verwaltung/" title="Verwaltung für Fahrlehrer">Login</a>
+<a class="navlink" href="verwaltung/" title="Verwaltung für Fahrlehrer/innen">Login</a>
 <button type="button" class="btn ghost" style="min-height: 44px; padding: 0 16px; font-size: 14px" data-action="theme" aria-label="Hell oder dunkel umschalten">Dunkel</button>
 </nav>
 <button type="button" class="menu-btn" data-action="menu" aria-expanded="false" aria-controls="menu-mob"><span class="ico-open"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span><span class="ico-close" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="menu-label">Menü</span></button>
@@ -98,10 +103,10 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <div class="menu-mob" id="menu-mob" hidden>
 <a href="#kurse" data-close-menu>Kurse</a>
 <a href="#lokale" data-close-menu>Lokale</a>
-<a href="#team" data-close-menu>Fahrlehrer</a>
+<a href="#team" data-close-menu>Fahrlehrer/innen</a>
 <a href="#faq" data-close-menu>FAQ</a>
 <a href="#anmeldung" data-close-menu>Anmeldung</a>
-<a href="verwaltung/" data-close-menu>Login für Fahrlehrer</a>
+<a href="verwaltung/" data-close-menu>Login für Fahrlehrer/innen</a>
 <button type="button" class="btn ghost" style="min-height: 44px; padding: 0 16px; font-size: 14px" data-action="theme" aria-label="Hell oder dunkel umschalten">Dunkel</button>
 </div>
 </header>
@@ -109,28 +114,28 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <section id="top" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 72px">
 <div class="hero">
 <div class="hero-text">
-<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)"><span data-anzahl="fahrlehrer">9</span> Fahrlehrer · <span data-anzahl="lokale">3</span> Lokale · 1 Anmeldung</p>
-<h1 class="serif" style="margin: 0; font-size: clamp(44px, 6.2vw, 88px); line-height: 0.98; letter-spacing: -0.02em">Verkehrsschule Oberbaselbiet</h1>
-<p style="margin: 28px 0 0; font-size: 20px; line-height: 1.5; color: var(--muted); max-width: 46ch">Wähl dein Lokal, such dir einen Termin aus und meld dich direkt online an. Einfacher geht’s nicht.</p>
+<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)"><span style="white-space: nowrap"><span data-anzahl="fahrlehrer">9</span> Fahrlehrer/innen</span> · <span style="white-space: nowrap"><span data-anzahl="lokale">3</span> Lokale</span> · <span style="white-space: nowrap">1 Anmeldung</span></p>
+<h1 class="t-haupt" style="margin: 0; font-size: clamp(40px, 5.6vw, 76px); line-height: 1.02">Verkehrsschule Oberbaselbiet</h1>
+<p style="margin: 28px 0 0; font-size: 20px; line-height: 1.5; color: var(--muted); max-width: 46ch">Wähle dein Lokal, suche dir einen Termin aus und melde dich direkt online an. Einfacher geht’s nicht.</p>
 </div>
 <div class="hero-img">
-<img src="bilder/platzhalter-lokal.svg" alt="Platzhalter: Lokal mit Fahrlehrern und Fahrschulauto" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; border-radius: 20px; border: 1px solid var(--line)">
+<img src="bilder/platzhalter-lokal.svg" alt="Platzhalter: Lokal mit Fahrlehrer/innen und Fahrschulauto" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; border-radius: 20px; border: 1px solid var(--line)">
 </div>
 <div class="hero-btns" style="display: flex; flex-wrap: wrap; gap: 12px">
 <a class="btn" href="#lokale">Termine ansehen</a>
-<a class="btn ghost" href="#team">Unsere Fahrlehrer</a>
+<a class="btn ghost" href="#team">Unsere Fahrlehrer/innen</a>
 </div>
 </div>
 </section>
 
 <section id="kurse" style="background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 0">
-<div class="neu-2027" style="background: var(--surface); border: 2px solid var(--accent); border-radius: 20px; padding: 28px 32px; min-width: 0">
-<p style="margin: 0 0 12px"><span style="display: inline-block; background: var(--accent); color: var(--accentInk); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px">Neu ab 1. Januar 2027</span></p>
-<p style="margin: 0 0 16px; line-height: 1.6; color: var(--muted); max-width: 70ch">Den VKU machst du dann schon vor der Theorieprüfung, also bevor du den Lernfahrausweis bekommst. Neu lernst du im Kurs auch, wie du mit Fahrassistenz-Systemen umgehst, und diese Inhalte kommen in der Theorieprüfung vor.</p>
+<div class="neu-2027" style="background: var(--accent); color: var(--accentInk); border-radius: 20px; padding: 28px 32px; min-width: 0">
+<p style="margin: 0 0 12px"><span style="display: inline-block; background: #FFFFFF; color: #0055A4; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px">Neu ab 1. Januar 2027</span></p>
+<p style="margin: 0 0 16px; line-height: 1.6; max-width: 70ch">Den VKU machst du dann schon vor der Theorieprüfung, also bevor du den Lernfahrausweis bekommst. Neu lernst du im Kurs auch, wie du mit Fahrassistenz-Systemen umgehst, und diese Inhalte kommen in der Theorieprüfung vor.</p>
 <a href="https://www.astra.admin.ch/de/newnsb/JI77FXMhV4_vvTYaZagW0" target="_blank" rel="noopener" style="font-size: 15px; font-weight: 600">Mehr Informationen ↗</a>
-<p style="margin: 20px 0 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Quellen</p>
-<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: var(--muted); overflow-wrap: anywhere">
+<p style="margin: 20px 0 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: .8">Quellen</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; opacity: .9; overflow-wrap: anywhere">
 <li><a href="https://www.astra.admin.ch/de/newnsb/JI77FXMhV4_vvTYaZagW0" target="_blank" rel="noopener">Bundesamt für Strassen ASTRA, Medienmitteilung vom 19. Dezember 2025</a></li>
 <li><a href="https://www.sg.ch/verkehr/strassenverkehr/lernfahrausweise/theoriepruefung/neuerungen-fahrausbildung-2027.html" target="_blank" rel="noopener">Kanton St. Gallen, Neuerungen in der Fahrausbildung 2027</a></li>
 </ul>
@@ -139,22 +144,24 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <div style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 24px">
 <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px">
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Kurs</p>
-<h2 class="serif" style="margin: 8px 0 12px; font-size: clamp(32px, 8vw, 40px); line-height: 1.05; hyphens: auto; overflow-wrap: break-word">Verkehrskundeunterricht</h2>
+<h2 class="t-kurs" style="margin: 8px 0 12px; font-size: clamp(26px, 6.4vw, 34px); line-height: 1.1; hyphens: auto; overflow-wrap: break-word">Verkehrskunde&shy;unterricht</h2>
 <p style="margin: 0 0 24px; line-height: 1.6; color: var(--muted)">4 Abende à 2 Lektionen zu Gefahrenlehre, Verkehrsumwelt, Verkehrssinnbildung, Fahrphysik und verantwortungsbewusstem Verhalten im Verkehr. Bis Ende 2026 brauchst du dafür einen gültigen Lernfahrausweis der Kategorie A, A1, B oder B1. Ab 2027 machst du den VKU schon vor der Theorieprüfung. Die Kursbestätigung ist unbeschränkt gültig.</p>
 <p style="margin: 0; font-size: 28px; font-weight: 700" data-preis="vku">CHF XX.XX</p>
+<p style="margin: 4px 0 0; font-size: 15px; color: var(--muted)">inklusive Lernmaterial</p>
 </div>
 <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px">
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Kurs</p>
-<h2 class="serif" style="margin: 8px 0 12px; font-size: clamp(32px, 8vw, 40px); line-height: 1.05; hyphens: auto; overflow-wrap: break-word">Nothelferkurs</h2>
+<h2 class="t-kurs" style="margin: 8px 0 12px; font-size: clamp(26px, 6.4vw, 34px); line-height: 1.1; hyphens: auto; overflow-wrap: break-word">Nothelferkurs</h2>
 <p style="margin: 0 0 24px; line-height: 1.6; color: var(--muted)">Braucht es für den Lernfahrausweis. 10 Stunden inklusive Pausen, verteilt auf mindestens zwei Tage. Die Bescheinigung ist 6 Jahre gültig. [Kurzbeschreibung folgt]</p>
 <p style="margin: 0; font-size: 28px; font-weight: 700" data-preis="nothelfer">CHF XX.XX</p>
+<p style="margin: 4px 0 0; font-size: 15px; color: var(--muted)">inklusive Ausweis</p>
 </div>
 </div>
 </section>
 
 <section id="lokale" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 72px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px">
-<h2 class="serif" style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1">Drei Lokale. Alle Termine.</h2>
+<h2 class="t-lokale" style="margin: 0; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.05">Drei Lokale. Alle Termine.</h2>
 <p style="margin: 0; font-size: 14px; color: var(--muted)">Beispieltermine für den Entwurf</p>
 </div>
 <div id="lokale-liste" class="lokale-grid"></div>
@@ -163,14 +170,14 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 
 <section id="team" style="background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
-<h2 class="serif" style="margin: 0 0 12px; font-size: clamp(40px, 5vw, 64px); line-height: 1">Deine Fahrlehrer.</h2>
-<p style="margin: 0 0 48px; font-size: 18px; color: var(--muted); max-width: 52ch"><span data-anzahl="fahrlehrer-wort">Neun</span> Fahrlehrer aus der Region, ein gemeinsames Kursangebot.</p>
+<h2 class="serif" style="margin: 0 0 12px; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.05">Deine Fahrlehrer/innen.</h2>
+<p style="margin: 0 0 48px; font-size: 18px; color: var(--muted); max-width: 52ch"><span data-anzahl="fahrlehrer-wort">Neun</span> Fahrlehrer/innen aus der Region, ein gemeinsames Kursangebot.</p>
 <div class="team-grid" id="team-grid"></div>
 </div>
 </section>
 
 <section id="anmeldung" style="max-width: 760px; margin: 0 auto; padding: 96px 24px">
-<h2 class="serif" style="margin: 0 0 12px; font-size: clamp(40px, 5vw, 64px); line-height: 1">Anmeldung.</h2>
+<h2 class="serif" style="margin: 0 0 12px; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.05">Anmeldung.</h2>
 <form id="formular" novalidate>
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="background: var(--soft); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
@@ -190,7 +197,10 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">PLZ<input type="text" name="plz" inputmode="numeric" autocomplete="postal-code" required></label>
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">Ort<input type="text" name="ort" autocomplete="address-level2" required></label>
 </div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; align-items: end">
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600"><span style="display: flex; flex-direction: column; gap: 2px">FABER-PIN<span style="font-size: 13px; font-weight: 400; color: var(--muted)">Die PIN, die du vom Strassenverkehrsamt bekommen hast</span></span><input type="text" name="faber" required></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">Geburtsdatum<input type="date" name="geburtsdatum" autocomplete="bday" required></label>
+</div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">E-Mail<input type="email" name="email" autocomplete="email" inputmode="email" required></label>
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600">Telefon<input type="tel" name="telefon" autocomplete="tel" required></label>
@@ -212,7 +222,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 
 <section id="faq" style="background: var(--soft); border-top: 1px solid var(--line)">
 <div style="max-width: 860px; margin: 0 auto; padding: 96px 24px">
-<h2 class="serif" style="margin: 0 0 40px; font-size: clamp(40px, 5vw, 64px); line-height: 1">Häufige Fragen.</h2>
+<h2 class="serif" style="margin: 0 0 40px; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.05">Häufige Fragen.</h2>
 <h3 style="margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Der Weg zum Führerausweis</h3>
 <div>
 <details class="faq"><summary>Wie läuft der Weg zum Führerausweis ab?</summary><p>Ab 1. Januar 2027 gehst du diese Schritte der Reihe nach:</p>
@@ -244,7 +254,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 </div>
 <h3 style="margin: 48px 0 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Anmeldung und Kurs bei uns</h3>
 <div>
-<details class="faq"><summary>Muss ich den VKU bei meinem eigenen Fahrlehrer besuchen?</summary><p>Nein. Du kannst dich in jedem unserer drei Lokale anmelden, egal bei wem von uns du Fahrstunden nimmst. <span class="ph">[Gilt das auch für Fahrschüler anderer Fahrschulen? Bitte klären]</span></p></details>
+<details class="faq"><summary>Muss ich den VKU bei meiner eigenen Fahrlehrerin oder meinem eigenen Fahrlehrer besuchen?</summary><p>Nein. Du kannst dich in jedem unserer drei Lokale anmelden, egal bei wem von uns du Fahrstunden nimmst. <span class="ph">[Gilt das auch für Fahrschüler anderer Fahrschulen? Bitte klären]</span></p></details>
 <details class="faq"><summary>Wie bezahle ich den Kurs?</summary><p><span class="ph">[Bar vor Ort, Rechnung oder TWINT, bitte ergänzen]</span></p></details>
 <details class="faq"><summary>Bekomme ich eine Bestätigung meiner Anmeldung?</summary><p><span class="ph">[Per E-Mail oder SMS, bitte ergänzen]</span></p></details>
 <details class="faq"><summary>Was mache ich, wenn ich nicht kommen kann?</summary><p>Melde dich so früh wie möglich bei uns. <span class="ph">[Regeln zur Abmeldung, bitte ergänzen]</span></p></details>
@@ -252,9 +262,9 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <div style="margin-top: 56px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
 <div>
 <h3 class="serif" style="margin: 0; font-size: 34px; line-height: 1.05">Noch Fragen?</h3>
-<p style="margin: 8px 0 0; font-size: 17px; color: var(--muted)">Melde dich direkt bei einem unserer Fahrlehrer.</p>
+<p style="margin: 8px 0 0; font-size: 17px; color: var(--muted)">Melde dich direkt bei einer unserer Fahrlehrer/innen.</p>
 </div>
-<a class="btn" href="#team">Zu den Fahrlehrern ↑</a>
+<a class="btn" href="#team">Zu den Fahrlehrer/innen ↑</a>
 </div>
 </div>
 </section>
@@ -265,7 +275,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <div style="display: flex; flex-wrap: wrap; gap: 24px">
 <a href="impressum.html">Impressum</a>
 <a href="datenschutz.html">Datenschutz</a>
-<a href="verwaltung/">Login für Fahrlehrer</a>
+<a href="verwaltung/">Login für Fahrlehrer/innen</a>
 </div>
 </div>
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px 28px">

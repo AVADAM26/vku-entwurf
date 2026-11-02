@@ -130,9 +130,21 @@
     ziel.innerHTML = html;
   }
 
+  // Reihenfolge der Fahrlehrer/innen bei jedem Besuch zufällig, damit nicht immer dieselben oben stehen
+  // (Wunsch der Fahrlehrer/innen, 2. November 2026). Fisher-Yates-Mischen.
+  function mischen(liste) {
+    var a = liste.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var x = a[i]; a[i] = a[j]; a[j] = x;
+    }
+    return a;
+  }
+
   function renderFahrlehrer(liste) {
     var ziel = document.getElementById('team-grid');
     if (!ziel) return;
+    liste = mischen(liste);
     ziel.innerHTML = liste.map(function (f) {
       var foto = f.foto
         ? '<img src="' + esc(f.foto) + '" alt="' + esc(f.fotoalt || f.name) + '" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: ' + esc(f.fokus || '50% 50%') + '; background: var(--line)">'
@@ -219,7 +231,11 @@
 
     var daten = { kurs: gewaehlterKurs, termin: gewaehlterTermin };
     formular.querySelectorAll('input[name]').forEach(function (f) {
-      if (f.name !== 'website') daten[f.name] = f.type === 'checkbox' ? f.checked : f.value.trim();
+      if (f.name === 'website') return;
+      var v = f.type === 'checkbox' ? f.checked : f.value.trim();
+      // Datum aus dem Datumsfeld (JJJJ-MM-TT) für die E-Mail in Schweizer Schreibweise TT.MM.JJJJ
+      if (f.type === 'date' && /^\d{4}-\d{2}-\d{2}$/.test(v)) v = v.split('-').reverse().join('.');
+      daten[f.name] = v;
     });
     var knopf = formular.querySelector('[data-action="send"]');
     if (knopf) knopf.disabled = true;
@@ -246,7 +262,7 @@
       danke.setAttribute('data-modus', ergebnis === 'entwurf' ? 'entwurf' : 'gesendet');
       scrollToId('anmeldung');
     }).catch(function (e) {
-      zeigeFehler(e.message || 'Das hat leider nicht geklappt. Bitte melde dich direkt bei einem Fahrlehrer.');
+      zeigeFehler(e.message || 'Das hat leider nicht geklappt. Bitte melde dich direkt bei einer Fahrlehrerin oder einem Fahrlehrer.');
       if (/ausgebucht/i.test(e.message)) ladenUndRendern();
     }).then(function () {
       if (knopf) knopf.disabled = false;

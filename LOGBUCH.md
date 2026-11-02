@@ -2,6 +2,24 @@
 
 Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide und Gründe stehen ausführlich in `CLAUDE.md`.
 
+## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
+
+Wünsche aus dem Call umgesetzt.
+
+| Änderung |
+|---|
+| Akzentfarbe Blau `#0055A4` mit weisser Schrift statt Gelb, auf allen Seiten. Kasten «Neu ab 1. Januar 2027» ganz blau mit weisser Schrift. Ampelpunkt «knapp» bleibt gelb. |
+| Titel ohne Serifen. Drei Titelschriften zur Auswahl: Montserrat (Haupttitel), Archivo (Kurstitel), Space Grotesk («Drei Lokale. Alle Termine.»), übrige Titel Hanken Grotesk. Instrument Serif entfernt. |
+| Pfade in `schriften/schriften.css` korrigiert (`url(datei.woff2)` statt `url(schriften/…)`), vorher lud der Browser keine der lokalen Schriften. |
+| «Fahrlehrer/innen» auf der Startseite, im Menü, im Footer und in der Datenschutzerklärung. |
+| Text unter dem Titel: «Wähle dein Lokal, suche dir einen Termin aus und melde dich …», Texte durchgesehen. |
+| Fahrlehrer-Karten in zufälliger Reihenfolge bei jedem Aufruf. |
+| Formular: FABER-PIN halb breit, daneben neu Geburtsdatum (auch in `anmeldung.php` und Datenschutzerklärung). |
+| Preise: VKU CHF 200.00 inklusive Lernmaterial, Nothelfer CHF 150.00 inklusive Ausweis. |
+| CLAUDE.md nachgeführt. |
+
+Offen: Auswahl der Titelschrift, Farbton der Plakette abgleichen, Logins für zwei Fahrlehrer/innen (Dani mit Adi), Lieferungen der Fahrlehrer/innen (Logo, Portraits, Nothelfer-Links, Text «Neu ab Januar»).
+
 ## 2. November 2026 · Adi mit Claude, vor dem Call mit den Fahrlehrern
 
 Ziel: Seite pflegbar machen (Mini-CMS), Anmeldung mit Platzlimite, Feinschliff an den Lokal-Karten.

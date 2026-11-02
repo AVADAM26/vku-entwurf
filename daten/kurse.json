@@ -3,12 +3,12 @@
     "id": "vku",
     "name": "VKU",
     "titel": "Verkehrskundeunterricht",
-    "preis": ""
+    "preis": "200.00"
   },
   {
     "id": "nothelfer",
     "name": "Nothelfer",
     "titel": "Nothelferkurs",
-    "preis": ""
+    "preis": "150.00"
   }
 ]

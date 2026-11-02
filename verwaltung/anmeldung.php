@@ -24,7 +24,7 @@ if (!is_array($e)) antwort(['ok' => false, 'fehler' => 'Ungültige Anfrage'], 40
 // Spamschutz: das unsichtbare Feld muss leer bleiben.
 if (!empty($e['website'])) antwort(['ok' => true]);
 
-$felder = ['kurs' => 'Kurs', 'vorname' => 'Vorname', 'name' => 'Name', 'strasse' => 'Strasse und Nr.', 'plz' => 'PLZ', 'ort' => 'Ort', 'faber' => 'FABER-PIN', 'email' => 'E-Mail', 'telefon' => 'Telefon'];
+$felder = ['kurs' => 'Kurs', 'vorname' => 'Vorname', 'name' => 'Name', 'strasse' => 'Strasse und Nr.', 'plz' => 'PLZ', 'ort' => 'Ort', 'faber' => 'FABER-PIN', 'geburtsdatum' => 'Geburtsdatum', 'email' => 'E-Mail', 'telefon' => 'Telefon'];
 $werte = [];
 foreach ($felder as $k => $bez) {
     $v = trim((string) ($e[$k] ?? ''));
