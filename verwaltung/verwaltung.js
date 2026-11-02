@@ -52,6 +52,12 @@
     if (t.zeit) text += (tage.length > 2 && text.indexOf(', ') > 0 ? ' ' : ', ') + t.zeit;
     return text;
   }
+  function plaetzeText(t) {
+    var max = parseInt(t.plaetze, 10), belegt = parseInt(t.belegt, 10) || 0;
+    if (!(max > 0)) return '';
+    var frei = max - belegt;
+    return frei <= 0 ? ', ausgebucht' : ', noch ' + frei + ' frei';
+  }
   function name(sammlung, id) {
     var e = (daten[sammlung] || []).filter(function (x) { return x.id === id; })[0];
     return e ? e.name : id;
@@ -120,6 +126,8 @@
           '<label>Lokal<select data-feld="lokal">' + lokale.map(function (x) { return '<option value="' + esc(x.id) + '"' + (x.id === t.lokal ? ' selected' : '') + '>' + esc(x.name) + '</option>'; }).join('') + '</select></label>' +
           '<label>Kurs<select data-feld="kurs">' + kurse.map(function (x) { return '<option value="' + esc(x.id) + '"' + (x.id === t.kurs ? ' selected' : '') + '>' + esc(x.name) + '</option>'; }).join('') + '</select></label>' +
           '<label>Zeit <span class="klein">zum Beispiel 18:30–20:30, bei Nothelfer leer</span><input type="text" data-feld="zeit" value="' + esc(t.zeit) + '"></label>' +
+          '<label>Plätze <span class="klein">Maximalzahl, leer = unbegrenzt</span><input type="number" min="0" step="1" inputmode="numeric" data-feld="plaetze" value="' + esc(t.plaetze == null ? '' : t.plaetze) + '"></label>' +
+          '<label>Belegt <span class="klein">zählt der Server bei jeder Anmeldung hoch' + plaetzeText(t) + '</span><input type="number" min="0" step="1" inputmode="numeric" data-feld="belegt" value="' + esc(t.belegt || 0) + '"></label>' +
           '</div>' +
           '<label>Kurstage</label><div class="tage">' + (t.tage || []).map(function (iso, i) {
             return '<span style="display:inline-flex;gap:4px;align-items:center"><input type="date" data-tag="' + i + '" value="' + esc(iso) + '"><button type="button" data-tag-weg="' + i + '" aria-label="Tag entfernen">×</button></span>';
@@ -141,6 +149,8 @@
     var t = terminVon(e.target); if (!t) return;
     var feld = e.target.getAttribute('data-feld');
     if (feld === 'ausgebucht') t.ausgebucht = e.target.checked;
+    else if (feld === 'plaetze') t.plaetze = e.target.value.trim() === '' ? null : Math.max(0, parseInt(e.target.value, 10) || 0);
+    else if (feld === 'belegt') t.belegt = Math.max(0, parseInt(e.target.value, 10) || 0);
     else if (feld) t[feld] = e.target.value.trim();
     else if (e.target.hasAttribute('data-tag')) t.tage[+e.target.getAttribute('data-tag')] = e.target.value;
     renderTermine(); fussZeigen();
@@ -301,7 +311,7 @@
     else if (a === 'verwerfen') { if (confirm('Alle ungespeicherten Änderungen verwerfen?')) { SAMMLUNGEN.forEach(function (s) { daten[s] = klon(original[s]); }); renderAlles(); } }
     else if (a === 'logout') api('logout', {}).then(function () { token = ''; zeigeLogin(); }).catch(function () { zeigeLogin(); });
     else if (a === 'termin-neu') {
-      var t0 = { id: neueId('t', daten.termine), lokal: daten.lokale[0].id, kurs: daten.kurse[0].id, tage: [heuteIso()], zeit: '', ausgebucht: false };
+      var t0 = { id: neueId('t', daten.termine), lokal: daten.lokale[0].id, kurs: daten.kurse[0].id, tage: [heuteIso()], zeit: '', ausgebucht: false, plaetze: null, belegt: 0 };
       daten.termine.push(t0); renderTermine(); fussZeigen();
       var el = document.querySelector('.eintrag[data-id="' + t0.id + '"]'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else if (a === 'vergangene-loeschen') {

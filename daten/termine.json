@@ -10,7 +10,9 @@
       "2026-10-29"
     ],
     "zeit": "18:30–20:30",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t002",
@@ -23,7 +25,9 @@
       "2026-11-26"
     ],
     "zeit": "18:30–20:30",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t003",
@@ -36,7 +40,9 @@
       "2026-12-17"
     ],
     "zeit": "18:30–20:30",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t004",
@@ -47,7 +53,9 @@
       "2026-11-07"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t005",
@@ -58,7 +66,9 @@
       "2026-12-05"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t006",
@@ -69,7 +79,9 @@
       "2027-01-09"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t007",
@@ -82,7 +94,9 @@
       "2026-11-05"
     ],
     "zeit": "19:00–21:00",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t008",
@@ -95,7 +109,9 @@
       "2026-12-03"
     ],
     "zeit": "19:00–21:00",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t009",
@@ -108,7 +124,9 @@
       "2027-01-14"
     ],
     "zeit": "19:00–21:00",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t010",
@@ -119,7 +137,9 @@
       "2026-11-14"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t011",
@@ -130,7 +150,9 @@
       "2026-12-12"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t012",
@@ -141,7 +163,9 @@
       "2027-01-16"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t013",
@@ -154,7 +178,9 @@
       "2026-10-15"
     ],
     "zeit": "19:00–21:00",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t014",
@@ -167,7 +193,9 @@
       "2026-11-12"
     ],
     "zeit": "19:00–21:00",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t015",
@@ -180,7 +208,9 @@
       "2026-12-10"
     ],
     "zeit": "19:00–21:00",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t016",
@@ -191,7 +221,9 @@
       "2026-11-21"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t017",
@@ -202,7 +234,9 @@
       "2026-12-19"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   },
   {
     "id": "t018",
@@ -213,6 +247,8 @@
       "2027-01-23"
     ],
     "zeit": "",
-    "ausgebucht": false
+    "ausgebucht": false,
+    "plaetze": null,
+    "belegt": 0
   }
 ]

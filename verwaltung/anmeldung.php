@@ -35,6 +35,42 @@ foreach ($felder as $k => $bez) {
 if (empty($e['einverstanden'])) antwort(['ok' => false, 'fehler' => 'Bitte bestätige die Datenschutzerklärung.'], 400);
 if (!filter_var($werte['email'], FILTER_VALIDATE_EMAIL)) antwort(['ok' => false, 'fehler' => 'Die E-Mail-Adresse sieht nicht richtig aus.'], 400);
 
+// Platz reservieren: Termin in daten/termine.json suchen, Belegung prüfen, um eins erhöhen.
+// Die Datei ist während der Prüfung gesperrt, damit zwei gleichzeitige Anmeldungen nicht beide durchkommen.
+$terminId = trim((string) ($e['termin'] ?? ''));
+$termineDatei = dirname(__DIR__) . '/daten/termine.json';
+$reserviert = false;
+function belegungAendern(string $datei, string $terminId, int $delta): array {
+    $fh = fopen($datei, 'c+');
+    if (!$fh || !flock($fh, LOCK_EX)) return ['ok' => false, 'fehler' => 'Termine nicht lesbar'];
+    $inhalt = stream_get_contents($fh);
+    $termine = json_decode($inhalt ?: '[]', true);
+    if (!is_array($termine)) { flock($fh, LOCK_UN); fclose($fh); return ['ok' => false, 'fehler' => 'Termine nicht lesbar']; }
+    $gefunden = false;
+    foreach ($termine as &$t) {
+        if (($t['id'] ?? '') !== $terminId) continue;
+        $gefunden = true;
+        $max = isset($t['plaetze']) && $t['plaetze'] !== '' && $t['plaetze'] !== null ? (int) $t['plaetze'] : 0;
+        $belegt = (int) ($t['belegt'] ?? 0);
+        if ($delta > 0 && (!empty($t['ausgebucht']) || ($max > 0 && $belegt >= $max))) {
+            flock($fh, LOCK_UN); fclose($fh);
+            return ['ok' => false, 'fehler' => 'Dieser Termin ist inzwischen ausgebucht. Bitte wähle einen anderen.'];
+        }
+        $t['belegt'] = max(0, $belegt + $delta);
+    }
+    unset($t);
+    if (!$gefunden) { flock($fh, LOCK_UN); fclose($fh); return ['ok' => false, 'fehler' => 'Diesen Termin gibt es nicht mehr. Bitte wähle oben neu.']; }
+    $neu = json_encode(array_values($termine), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n";
+    ftruncate($fh, 0); rewind($fh); fwrite($fh, $neu); fflush($fh);
+    flock($fh, LOCK_UN); fclose($fh);
+    return ['ok' => true];
+}
+if ($terminId !== '' && is_file($termineDatei)) {
+    $r = belegungAendern($termineDatei, $terminId, 1);
+    if (!$r['ok']) antwort($r, 409);
+    $reserviert = true;
+}
+
 $absender = $konfig['absender'];
 $kopf = "From: Verkehrsschule Oberbaselbiet <$absender>\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 8bit\r\n";
 
@@ -44,7 +80,11 @@ foreach ($felder as $k => $bez) $text .= str_pad($bez . ':', 18) . $werte[$k] . 
 $text .= "\nEingegangen: " . date('d.m.Y H:i') . "\n";
 $betreff = '=?UTF-8?B?' . base64_encode('Anmeldung: ' . $werte['kurs'] . ' – ' . $werte['vorname'] . ' ' . $werte['name']) . '?=';
 $ok = mail($konfig['empfaenger'], $betreff, $text, $kopf . "Reply-To: {$werte['email']}\r\n");
-if (!$ok) antwort(['ok' => false, 'fehler' => 'Die Anmeldung konnte nicht verschickt werden. Bitte melde dich direkt bei einem Fahrlehrer.'], 500);
+if (!$ok) {
+    // Mail fehlgeschlagen: den reservierten Platz wieder freigeben.
+    if ($reserviert) belegungAendern($termineDatei, $terminId, -1);
+    antwort(['ok' => false, 'fehler' => 'Die Anmeldung konnte nicht verschickt werden. Bitte melde dich direkt bei einem Fahrlehrer.'], 500);
+}
 
 // 2. Bestätigung an die Person
 $bestaetigung = "Hallo {$werte['vorname']}\n\nDanke für deine Anmeldung. Wir haben sie erhalten:\n\n"

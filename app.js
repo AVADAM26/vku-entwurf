@@ -56,6 +56,13 @@
     return text;
   }
 
+  // Freie Plätze eines Termins, null = unbegrenzt (keine Maximalzahl gesetzt).
+  function freiePlaetze(t) {
+    var max = parseInt(t.plaetze, 10);
+    if (!(max > 0)) return null;
+    return max - (parseInt(t.belegt, 10) || 0);
+  }
+
   function heuteIso() {
     var d = new Date();
     return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
@@ -98,10 +105,16 @@
         var zeilen = liste.length ? liste.map(function (t) {
           var text = terminText(t);
           var wahl = k.name + ' · ' + l.name + ' · ' + text;
-          var knopf = t.ausgebucht
+          var frei = freiePlaetze(t);
+          var voll = t.ausgebucht || (frei !== null && frei <= 0);
+          var knopf = voll
             ? '<span style="font-size: 14px; font-weight: 600; color: var(--muted); white-space: nowrap">Ausgebucht</span>'
-            : '<button type="button" class="pick" data-action="pick" data-kurs="' + esc(wahl) + '">Anmelden</button>';
-          return '<div class="slot"><span style="font-size: 15px">' + esc(text) + '</span>' + knopf + '</div>';
+            : '<button type="button" class="pick" data-action="pick" data-kurs="' + esc(wahl) + '" data-termin="' + esc(t.id) + '">Anmelden</button>';
+          // Knappheit nur zeigen, wenn sie echt ist: ab drei freien Plätzen und weniger.
+          var hinweisFrei = !voll && frei !== null && frei <= 3
+            ? '<span style="display: block; font-size: 13px; color: var(--muted); margin-top: 2px">Noch ' + frei + (frei === 1 ? ' Platz' : ' Plätze') + '</span>'
+            : '';
+          return '<div class="slot"><span style="font-size: 15px">' + esc(text) + hinweisFrei + '</span>' + knopf + '</div>';
         }).join('') : '<div class="slot"><span style="font-size: 15px; color: var(--muted)">Neue Termine folgen</span></div>';
         return '<div class="lokal-kurs"><h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">' + esc(k.name) + '</h4>' + zeilen + '</div>';
       }).join('');
@@ -140,21 +153,24 @@
     });
   }
 
-  if (document.getElementById('lokale-liste')) {
-    Promise.all([laden('lokale'), laden('kurse'), laden('termine'), laden('fahrlehrer')]).then(function (d) {
+  var erstesLaden = true;
+  function ladenUndRendern() {
+    return Promise.all([laden('lokale'), laden('kurse'), laden('termine'), laden('fahrlehrer')]).then(function (d) {
       renderLokale(d[0], d[1], d[2]);
       renderFahrlehrer(d[3]);
       renderZahlen(d[0], d[3], d[1]);
-      if (location.hash) {
+      if (erstesLaden && location.hash) {
         var ziel = document.getElementById(location.hash.slice(1));
         if (ziel) ziel.scrollIntoView();
       }
+      erstesLaden = false;
     }).catch(function (err) {
       var ziel = document.getElementById('lokale-liste');
       if (ziel) ziel.innerHTML = '<p style="margin: 0; color: var(--muted)">Die Termine konnten nicht geladen werden. Bitte später nochmals versuchen.</p>';
       if (window.console) console.error(err);
     });
   }
+  if (document.getElementById('lokale-liste')) ladenUndRendern();
 
   // ---------- Anmeldung ----------
   var gewaehlt = document.getElementById('gewaehlt');
@@ -165,9 +181,11 @@
   var fehler = document.getElementById('formular-fehler');
   var hp = document.getElementById('hp');
   var gewaehlterKurs = '';
+  var gewaehlterTermin = '';
 
-  function setChoice(text) {
+  function setChoice(text, terminId) {
     gewaehlterKurs = text || '';
+    gewaehlterTermin = terminId || '';
     if (!gewaehlt) return;
     gewaehlt.textContent = text || 'Bitte oben bei einem Lokal einen Termin wählen';
     if (zuTerminen) zuTerminen.hidden = !!text;
@@ -197,7 +215,7 @@
     // Spamschutz: Bots füllen das unsichtbare Feld aus. Dann still verwerfen.
     if (hp && hp.value) { formular.hidden = true; danke.hidden = false; return; }
 
-    var daten = { kurs: gewaehlterKurs };
+    var daten = { kurs: gewaehlterKurs, termin: gewaehlterTermin };
     formular.querySelectorAll('input[name]').forEach(function (f) {
       if (f.name !== 'website') daten[f.name] = f.type === 'checkbox' ? f.checked : f.value.trim();
     });
@@ -227,6 +245,7 @@
       scrollToId('anmeldung');
     }).catch(function (e) {
       zeigeFehler(e.message || 'Das hat leider nicht geklappt. Bitte melde dich direkt bei einem Fahrlehrer.');
+      if (/ausgebucht/i.test(e.message)) ladenUndRendern();
     }).then(function () {
       if (knopf) knopf.disabled = false;
     });
@@ -255,7 +274,7 @@
     else if (a === 'theme') setTheme(!site.classList.contains('dark'));
     else if (a === 'lokale') scrollToId('lokale');
     else if (a === 'pick') {
-      setChoice(t.getAttribute('data-kurs'));
+      setChoice(t.getAttribute('data-kurs'), t.getAttribute('data-termin'));
       zeigeFehler('');
       if (formular) formular.hidden = false;
       if (danke) danke.hidden = true;

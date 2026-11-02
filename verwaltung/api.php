@@ -103,6 +103,8 @@ switch ($aktion) {
                 foreach ($eintrag['tage'] as $tag) {
                     if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) $tag)) antwort(['ok' => false, 'fehler' => "Eintrag $i: ungültiges Datum «$tag»"], 400);
                 }
+                if (isset($eintrag['plaetze']) && $eintrag['plaetze'] !== '' && (!is_int($eintrag['plaetze']) || $eintrag['plaetze'] < 0)) antwort(['ok' => false, 'fehler' => "Eintrag $i: Plätze muss eine ganze Zahl sein"], 400);
+                if (isset($eintrag['belegt']) && (!is_int($eintrag['belegt']) || $eintrag['belegt'] < 0)) antwort(['ok' => false, 'fehler' => "Eintrag $i: Belegt muss eine ganze Zahl sein"], 400);
             }
             foreach ($eintrag as $k => $v) {
                 if (!is_scalar($v) && !is_null($v) && !is_array($v)) antwort(['ok' => false, 'fehler' => "Eintrag $i: Feld «$k» hat einen ungültigen Wert"], 400);
