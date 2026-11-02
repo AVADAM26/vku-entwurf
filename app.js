@@ -1,4 +1,4 @@
-// VKU Oberbaselbiet, Entwurf. Steuert Dunkelmodus, Terminauswahl, Formular und das Auto nach oben.
+// Verkehrsschule Oberbaselbiet, Entwurf. Steuert Dunkelmodus, Terminauswahl, Formular und das Auto nach oben.
 (function () {
   var site = document.querySelector('.site');
   var themeBtns = document.querySelectorAll('[data-action="theme"]');
