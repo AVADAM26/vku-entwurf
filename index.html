@@ -45,7 +45,8 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 .lokal{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;row-gap:24px}
 .lokal>*{padding:0 28px}
 .lokal>.lokal-foto{padding:0}
-.lokal>.lokal-kopf{padding-top:28px}
+.lokal>.lokal-kopf{padding-top:28px;display:flex;flex-direction:column;align-items:flex-start}
+.lokal-kopf .route{margin-top:auto;padding-top:10px}
 .lokal>.lokal-kurs:last-child{padding-bottom:28px}
 @supports (grid-template-rows: subgrid){
   .lokal{display:grid;grid-template-rows:subgrid}

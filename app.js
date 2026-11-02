@@ -90,7 +90,7 @@
       var hinweis = l.hinweis ? '<p style="margin: 4px 0 0; font-size: 14px; color: var(--muted)">' + esc(l.hinweis) + '</p>' : '';
       // «Route planen» steht bei jedem Lokal, damit die Karten gleich aussehen. Ohne Adresse führt der Link
       // vorläufig auf die Kartensuche nach dem Ort (Wunsch Adi, 2. November 2026).
-      var route = '<a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(l.adresse || l.name) + '" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; min-height: 44px; font-size: 15px; font-weight: 600">' + PIN + 'Route planen</a>';
+      var route = '<a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(l.adresse || l.name) + '" target="_blank" rel="noopener" class="route" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 15px; font-weight: 600">' + PIN + 'Route planen</a>';
       var bloecke = kurse.map(function (k) {
         var liste = termine.filter(function (t) {
           return t.lokal === l.id && t.kurs === k.id && t.tage && t.tage.length && t.tage.slice().sort().pop() >= heute;
