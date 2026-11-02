@@ -103,10 +103,14 @@
             : '<button type="button" class="pick" data-action="pick" data-kurs="' + esc(wahl) + '">Anmelden</button>';
           return '<div class="slot"><span style="font-size: 15px">' + esc(text) + '</span>' + knopf + '</div>';
         }).join('') : '<div class="slot"><span style="font-size: 15px; color: var(--muted)">Neue Termine folgen</span></div>';
-        return '<div><h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">' + esc(k.name) + '</h4>' + zeilen + '</div>';
+        return '<div class="lokal-kurs"><h4 class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">' + esc(k.name) + '</h4>' + zeilen + '</div>';
       }).join('');
-      return '<article style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">' + kopf +
-        '<div style="padding: 28px; display: flex; flex-direction: column; gap: 20px"><div><h3 class="serif" style="margin: 0; font-size: 36px; line-height: 1">' + esc(l.name) + '</h3>' + adresse + hinweis + route + '</div>' + bloecke + '</div></article>';
+      // Jede Karte belegt im Raster so viele Zeilen wie Foto + Kopf + Kurse. Mit Subgrid sind die Zeilen
+      // in allen Karten gleich hoch, darum stehen VKU und Nothelfer überall auf derselben Höhe.
+      return '<article class="lokal" style="grid-row: span ' + (2 + kurse.length) + '">' +
+        '<div class="lokal-foto">' + kopf + '</div>' +
+        '<div class="lokal-kopf"><h3 class="serif" style="margin: 0; font-size: 36px; line-height: 1">' + esc(l.name) + '</h3>' + adresse + hinweis + route + '</div>' +
+        bloecke + '</article>';
     }).join('');
     ziel.innerHTML = html;
   }
