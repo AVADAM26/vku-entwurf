@@ -9,6 +9,6 @@ Konzept und Umsetzung: AVADAM
 
 Reines HTML, CSS und JavaScript. Die Inhalte, die oft ändern, liegen als JSON in `daten/`
 (Lokale, Kurse und Preise, Termine, Fahrlehrer); `app.js` baut daraus die Seite.
-In `verwaltung/` pflegen die Fahrlehrer diese Daten mit Login (PHP, auf Hostpoint).
+In `verwaltung/` pflegen die Fahrlehrer diese Daten mit Login (PHP, beim Hosting bei der Allware AG).
 Ohne PHP, etwa auf GitHub Pages, läuft die Verwaltung im Vorschau-Modus und speichert nichts.
 Alles Weitere in `CLAUDE.md`.

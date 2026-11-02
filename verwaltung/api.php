@@ -1,6 +1,6 @@
 <?php
 // Verwaltung der Verkehrsschule Oberbaselbiet: Login und Speichern der Datendateien in ../daten/.
-// Braucht verwaltung/benutzer.php (siehe benutzer.beispiel.php). Läuft auf jedem Hosting mit PHP 8, zum Beispiel Hostpoint.
+// Braucht verwaltung/benutzer.php (siehe benutzer.beispiel.php). Läuft auf jedem Hosting mit PHP 8 (vorgesehen: Allware AG).
 declare(strict_types=1);
 
 header('Content-Type: application/json; charset=utf-8');

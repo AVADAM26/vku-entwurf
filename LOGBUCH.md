@@ -18,6 +18,8 @@ Wünsche aus dem Call umgesetzt.
 | Preise: VKU CHF 200.00 inklusive Lernmaterial, Nothelfer CHF 150.00 inklusive Ausweis. |
 | CLAUDE.md nachgeführt. |
 
+Nachtrag: Kasten «Neu ab 1. Januar 2027» weiss mit blauem Rand, nur das Etikett blau (e8d6b5d). Hosting und Domain neu bei der Allware AG statt Hostpoint, in CLAUDE.md, README, `api.php` und Datenschutzerklärung nachgeführt.
+
 Offen: Auswahl der Titelschrift, Farbton der Plakette abgleichen, Logins für zwei Fahrlehrer/innen (Dani mit Adi), Lieferungen der Fahrlehrer/innen (Logo, Portraits, Nothelfer-Links, Text «Neu ab Januar»).
 
 ## 2. November 2026 · Adi mit Claude, vor dem Call mit den Fahrlehrern
