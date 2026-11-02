@@ -1,0 +1,5 @@
+# Echte Zugangsdaten und Konfiguration bleiben auf dem Server
+verwaltung/benutzer.php
+verwaltung/konfig.php
+# Sicherungskopien der Verwaltung
+daten/sicherung/

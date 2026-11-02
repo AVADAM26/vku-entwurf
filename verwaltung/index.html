@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Verwaltung · Verkehrsschule Oberbaselbiet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+[hidden]{display:none !important}
+.site{--bg:#FBFAF7;--surface:#FFFFFF;--line:#E6E2DA;--ink:#17171A;--muted:#5C5A57;--accent:#F2B807;--accentInk:#17171A;--soft:#F3F0E9;--rot:#B42318;--gruen:#1F7A3E;
+  min-height:100vh;background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;transition:background .3s,color .3s}
+.site.dark{--bg:#0F1012;--surface:#181A1D;--line:#2A2D31;--ink:#F2F1EE;--muted:#A8A6A1;--accent:#F5C531;--accentInk:#111111;--soft:#1D2024;--rot:#F97066;--gruen:#5BD08A}
+a{color:var(--ink)}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+input,textarea,select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-height:46px;box-sizing:border-box;width:100%}
+textarea{min-height:120px;line-height:1.5;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+input[type=checkbox]{width:22px;height:22px;min-height:22px;padding:0;margin:0}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+label.zeile{flex-direction:row;align-items:center;gap:10px;font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:none;background:var(--ink);color:var(--bg);font:inherit;font-weight:600;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{opacity:.88}
+.btn.gelb{background:var(--accent);color:var(--accentInk)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink);opacity:1}
+.btn.klein{min-height:38px;padding:0 14px;font-size:14px}
+.btn:disabled{opacity:.5;cursor:default}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.kopf{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.kopf .logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;font-size:17px}
+.kopf .logo span.mark{width:40px;height:40px;border-radius:10px;background:var(--accent);color:var(--accentInk);display:flex;align-items:center;justify-content:center;font-size:13px}
+.kopf .rechts{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+main{max-width:1100px;margin:0 auto;padding:40px 24px 120px}
+h1{margin:0 0 8px;font-size:clamp(36px,5vw,56px);line-height:1}
+.hinweis{background:var(--accent);color:var(--accentInk);text-align:center;font-size:14px;font-weight:600;padding:10px 16px}
+.karte{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.reiter{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 20px}
+.reiter button{background:transparent;border:1px solid var(--line);border-radius:999px;color:var(--muted);font:inherit;font-size:15px;font-weight:600;padding:0 18px;min-height:44px;cursor:pointer}
+.reiter button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.liste{display:flex;flex-direction:column;gap:14px}
+.eintrag{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.eintrag.vorbei{opacity:.6}
+.eintrag .titel{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.eintrag .titel strong{font-size:17px}
+.eintrag .vorschau{font-size:15px;color:var(--muted)}
+.tage{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tage input{width:auto;min-width:160px}
+.tage button{background:transparent;border:1px solid var(--line);border-radius:999px;min-height:38px;padding:0 12px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.fuss{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:12px 24px}
+.fuss .innen{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fuss .meldung{font-size:14px;color:var(--muted);flex:1 1 200px}
+.fuss .meldung.ok{color:var(--gruen)}
+.fuss .meldung.fehler{color:var(--rot);font-weight:600}
+.lokalgruppe h2{margin:28px 0 12px;font-size:30px}
+.lokalgruppe:first-child h2{margin-top:0}
+.klein{font-size:13px;color:var(--muted);font-weight:400}
+.fehlertext{color:var(--rot);font-weight:600;font-size:15px}
+.login{max-width:420px;margin:40px auto 0}
+.zeile-oben{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+@media (max-width:600px){main{padding:28px 16px 140px}.karte,.eintrag{padding:16px}}
+</style>
+</head>
+<body>
+<div class="site" id="site">
+<div class="hinweis" id="vorschau-hinweis" hidden>Vorschau-Modus: Hier läuft kein Server, Änderungen werden nicht gespeichert. Zum Testen darf alles angefasst werden.</div>
+<header>
+<div class="kopf">
+<a class="logo" href="../"><span class="mark">Logo</span>Verkehrsschule Oberbaselbiet</a>
+<div class="rechts">
+<span id="wer" hidden></span>
+<a class="btn ghost klein" href="../" target="_blank" rel="noopener">Seite ansehen ↗</a>
+<button type="button" class="btn ghost klein" data-action="theme">Dunkel</button>
+<button type="button" class="btn ghost klein" data-action="logout" hidden>Abmelden</button>
+</div>
+</div>
+</header>
+
+<main>
+<section id="login" hidden>
+<div class="login karte">
+<h1 class="serif">Verwaltung.</h1>
+<p style="margin:0;color:var(--muted);line-height:1.5">Hier pflegt ihr Termine, Lokale, Fahrlehrer und Preise. Melde dich mit deinem Login an.</p>
+<form id="login-form" style="display:flex;flex-direction:column;gap:14px">
+<label>Benutzername<input type="text" name="benutzer" autocomplete="username" required></label>
+<label>Passwort<input type="password" name="passwort" autocomplete="current-password" required></label>
+<p class="fehlertext" id="login-fehler" hidden></p>
+<button type="submit" class="btn gelb">Anmelden</button>
+</form>
+</div>
+</section>
+
+<section id="app" hidden>
+<div class="zeile-oben">
+<div>
+<h1 class="serif">Verwaltung.</h1>
+<p style="margin:0;color:var(--muted)">Was du hier speicherst, steht sofort auf der Seite.</p>
+</div>
+</div>
+
+<div class="reiter" role="tablist">
+<button type="button" role="tab" aria-selected="true" data-reiter="termine">Termine</button>
+<button type="button" role="tab" aria-selected="false" data-reiter="lokale">Lokale</button>
+<button type="button" role="tab" aria-selected="false" data-reiter="fahrlehrer">Fahrlehrer</button>
+<button type="button" role="tab" aria-selected="false" data-reiter="kurse">Preise</button>
+</div>
+
+<div id="reiter-termine" role="tabpanel">
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px">
+<button type="button" class="btn klein" data-action="termin-neu">+ Neuer Termin</button>
+<button type="button" class="btn ghost klein" data-action="vergangene-loeschen">Vergangene Termine löschen</button>
+</div>
+<p class="klein" style="margin:0 0 16px">Auf der Seite erscheinen pro Lokal und Kurs die nächsten drei Termine. Vergangene Termine blendet die Seite von selbst aus.</p>
+<div id="termine-liste"></div>
+</div>
+
+<div id="reiter-lokale" role="tabpanel" hidden>
+<p class="klein" style="margin:0 0 16px">Die Adresse wird für «Route planen» verwendet. Ohne Adresse steht «[Adresse folgt]». Das Foto ist ein Pfad im Ordner bilder, zum Beispiel bilder/lokal-gelterkinden.jpg.</p>
+<div id="lokale-liste" class="liste"></div>
+</div>
+
+<div id="reiter-fahrlehrer" role="tabpanel" hidden>
+<p class="klein" style="margin:0 0 16px">Kurzportrait: höchstens fünf Sätze, per Du. Die vier Fragen: Was ist dir beim Unterrichten wichtig? Welches Auto, Schaltung oder Automat, welche Kategorien? Welche Region? Etwas Persönliches. Der Bildausschnitt steht als «x% y%», zum Beispiel «50% 30%», damit das Gesicht im Bild bleibt.</p>
+<div id="fahrlehrer-liste" class="liste"></div>
+</div>
+
+<div id="reiter-kurse" role="tabpanel" hidden>
+<p class="klein" style="margin:0 0 16px">Preis ohne «CHF», zum Beispiel 220.00. Leer lassen zeigt «CHF XX.XX».</p>
+<div id="kurse-liste" class="liste"></div>
+</div>
+</section>
+</main>
+
+<div class="fuss" id="fuss" hidden>
+<div class="innen">
+<span class="meldung" id="meldung"></span>
+<button type="button" class="btn ghost" data-action="verwerfen">Verwerfen</button>
+<button type="button" class="btn gelb" data-action="speichern">Speichern</button>
+</div>
+</div>
+</div>
+<script src="verwaltung.js"></script>
+</body>
+</html>
