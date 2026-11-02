@@ -41,7 +41,9 @@ verwaltung/       Mini-CMS für die Fahrlehrer (Login, bearbeitet termine, lokal
   anmeldung.php     nimmt das Anmeldeformular entgegen und verschickt es per E-Mail
   passwort.php      Hilfsseite zum Erzeugen eines Passwort-Hashs, nach dem Einrichten löschen
   benutzer.beispiel.php, konfig.beispiel.php   Vorlagen; die echten Dateien liegen nur auf dem Server
+schriften/        Instrument Serif und Hanken Grotesk als WOFF2 plus schriften.css, lokal statt von Google
 bilder/           Fotos der Fahrlehrer, Platzhalter, AVADAM Logo
+LOGBUCH.md        Sitzungs-Log: was wann geändert wurde, mit Commits
 robots.txt        sperrt im Entwurf alles
 .gitignore        hält benutzer.php, konfig.php und daten/sicherung/ aus dem Repository
 ```
@@ -92,7 +94,7 @@ Entschieden am 2. November 2026 (Adi), gebaut mit Claude, vor dem Call mit den F
 - Anmeldedaten werden bis zum Kurs und danach 30 Tage aufbewahrt, dann automatisch gelöscht.
 - Keine Besucherstatistik, keine Werbe- oder Analyse-Cookies.
 - Server-Logdaten nur so lange wie nötig. Konkrete Dauer beim Hosting klären und möglichst kurz einstellen.
-- Im Entwurf kommen die Schriften noch von Google. Für den Start lokal auf den Server legen, sonst stimmt die Datenschutzerklärung nicht.
+- Die Schriften liegen seit dem 2. November 2026 lokal in `schriften/` (Instrument Serif und Hanken Grotesk als WOFF2, SIL Open Font License, Hanken als variable Schrift für 400 bis 700). Kein Aufruf mehr an Google, auf keiner der vier Seiten.
 - Kontaktperson im Impressum und Datenschutz ist noch ein Platzhalter (Max Muster).
 
 ## Noch offen
