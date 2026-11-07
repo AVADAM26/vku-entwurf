@@ -26,6 +26,7 @@ Die neun: Rahel Schaffner, Ken Klauser, Dominic Imhof, Georg Schweingruber, Chri
 
 ```
 index.html        Startseite: Kurse, Lokale, Fahrlehrer, Anmeldung, FAQ
+neu-ab-2027.html  Unterseite «Neu ab 2027»: alle Änderungen ab 2027 im Überblick (Reiter ganz links im Menü)
 impressum.html    Impressum
 datenschutz.html  Datenschutzerklärung
 app.js            Hell/Dunkel, Klappmenü, lädt daten/*.json und baut Lokale, Termine, Fahrlehrer, Preise; Formular, Auto nach oben

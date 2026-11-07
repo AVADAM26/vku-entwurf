@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Neu ab 2027 · Verkehrsschule Oberbaselbiet · Entwurf</title>
+<link rel="stylesheet" href="schriften/schriften.css">
+<style>
+body{margin:0}
+[hidden]{display:none !important}
+.site{--bg:#FBFAF7;--surface:#FFFFFF;--line:#E6E2DA;--ink:#17171A;--muted:#5C5A57;--accent:#0055A4;--accentInk:#FFFFFF;--soft:#F3F0E9;
+  background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;transition:background .3s,color .3s}
+.site.dark{--bg:#0F1012;--surface:#181A1D;--line:#2A2D31;--ink:#F2F1EE;--muted:#A8A6A1;--accent:#2F6BC8;--accentInk:#FFFFFF;--soft:#1D2024}
+a{color:var(--ink)}a:hover{color:var(--muted)}
+/* Titel ohne Serifen (Wunsch der Fahrlehrer/innen, 2. November 2026). Drei Titel zeigen je eine Schrift zur Auswahl. */
+.serif{font-family:"Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
+.t-haupt{font-family:"Montserrat","Hanken Grotesk",system-ui,sans-serif;font-weight:800;letter-spacing:-0.025em}
+.t-kurs{font-family:"Archivo","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.01em}
+.t-lokale{font-family:"Space Grotesk","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
+input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-height:48px;box-sizing:border-box;width:100%}
+input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:none;background:var(--ink);color:var(--bg);font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{color:var(--bg);opacity:.88}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{color:var(--ink);border-color:var(--ink)}
+.slot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.pick{background:transparent;border:1px solid var(--line);border-radius:999px;color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:0 16px;min-height:44px;cursor:pointer;white-space:nowrap}
+.pick:hover{background:var(--accent);color:var(--accentInk);border-color:var(--accent)}
+.navlink{text-decoration:none;font-size:15px;color:var(--muted)}
+.navlink:hover{color:var(--ink)}
+.credit{opacity:.6;transition:opacity .2s}.credit:hover{opacity:1}
+.site.dark .credit-logo{filter:brightness(0) invert(1)}
+.topcar{position:fixed;right:20px;bottom:20px;z-index:50;width:56px;height:72px;padding:0;border:none;background:transparent;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;filter:drop-shadow(0 6px 10px rgba(0,0,0,.22))}
+.topcar.show{opacity:1;pointer-events:auto}
+.topcar.show:hover{transform:translateY(-4px);transition:opacity .3s,transform .2s}
+.topcar.drive{opacity:0;pointer-events:none;transform:translateY(-110vh);transition:transform .9s cubic-bezier(.55,0,.8,.2),opacity .25s .7s}
+.smoke{position:fixed;right:20px;bottom:12px;width:56px;height:40px;z-index:49;pointer-events:none;opacity:1;transition:opacity .6s}
+.smoke span{position:absolute;bottom:0;width:22px;height:22px;border-radius:50%;background:rgba(150,150,150,.8);opacity:0}
+.smoke.on span{animation:puff .9s ease-out infinite}
+.smoke.fade{opacity:0}
+@keyframes puff{0%{transform:translate(0,0) scale(.3);opacity:.9}100%{transform:translate(var(--dx),22px) scale(2.4);opacity:0}}
+.topcar.burn{opacity:1;animation:shake .07s linear infinite}
+@keyframes shake{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(-1.5px,1px) rotate(-2deg)}50%{transform:translate(1.5px,0) rotate(2deg)}75%{transform:translate(-1px,-1px) rotate(-1deg)}100%{transform:translate(0,0) rotate(0)}}
+.topcar:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+.ph{background:var(--accent);color:var(--accentInk);padding:0 4px;border-radius:4px}
+.lokale-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px}
+.lokal{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;row-gap:24px}
+.lokal>*{padding:0 28px}
+.lokal>.lokal-foto{padding:0}
+.lokal>.lokal-kopf{padding-top:28px;display:flex;flex-direction:column;align-items:flex-start}
+.lokal-kopf .route{margin-top:auto;padding-top:10px}
+.lokal>.lokal-kurs:last-child{padding-bottom:28px}
+@supports (grid-template-rows: subgrid){
+  .lokal{display:grid;grid-template-rows:subgrid}
+}
+.frei{display:block;font-size:13px;color:var(--muted);margin-top:3px}
+.frei i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px;background:var(--gruen)}
+.frei-knapp{color:var(--ink)}.frei-knapp i{background:var(--gelb)}
+.frei-letzter{color:var(--rot);font-weight:600}.frei-letzter i{background:var(--rot)}
+.site{--gruen:#2E8B57;--gelb:#F2B807;--rot:#B42318}.site.dark{--gruen:#5BD08A;--rot:#F97066}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.team-grid{grid-template-columns:1fr}}
+.faq{border-top:1px solid var(--line)}
+.faq:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;min-height:44px;font-size:19px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:28px;font-weight:400;line-height:1;color:var(--muted);transition:transform .2s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:0 0 22px;font-size:17px;line-height:1.65;color:var(--muted);max-width:62ch}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"text img" "btns .";column-gap:56px;row-gap:36px}
+.hero-text{grid-area:text}.hero-img{grid-area:img;min-height:320px;position:relative}.hero-img img{position:absolute;inset:0}.hero-btns{grid-area:btns}
+@media (max-width: 860px){.hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "img" "btns";row-gap:28px}.hero-img{aspect-ratio:10/9;min-height:0}}
+.menu-btn{display:none;align-items:center;gap:8px;min-height:44px;padding:0 14px;margin-left:auto;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.menu-mob{display:none}
+@media (max-width: 760px){.nav-desk{display:none !important}.menu-btn{display:inline-flex}.menu-mob{display:flex;flex-direction:column;padding:4px 24px 16px;border-top:1px solid var(--line)}.menu-mob a{display:flex;align-items:center;min-height:52px;font-size:18px;font-weight:600;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line)}.menu-mob .btn{margin-top:16px;align-self:flex-start}}
+</style>
+</head>
+<body>
+<div id="seitenanfang" class="site" style="min-height: 100vh">
+
+
+<div style="background: var(--accent); color: var(--accentInk); text-align: center; font-size: 14px; font-weight: 600; padding: 10px 16px">Entwurf zur Ansicht. Das Anmeldeformular verschickt noch keine Daten.</div>
+<header style="position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line)">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
+<span style="width: 40px; height: 40px; border-radius: 10px; background: var(--accent); color: var(--accentInk); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">Logo</span>
+<span style="font-weight: 700; font-size: 17px; letter-spacing: -0.01em">Verkehrsschule Oberbaselbiet</span>
+</a>
+<nav class="nav-desk" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<a class="navlink" href="neu-ab-2027.html" aria-current="page" style="color: var(--ink)">Neu ab 2027</a>
+<a class="navlink" href="index.html#kurse">Kurse</a>
+<a class="navlink" href="index.html#lokale">Lokale</a>
+<a class="navlink" href="index.html#team">Fahrlehrer/innen</a>
+<a class="navlink" href="index.html#faq">FAQ</a>
+<a class="navlink" href="index.html#anmeldung">Anmeldung</a>
+<a class="navlink" href="verwaltung/" title="Verwaltung für Fahrlehrer/innen">Login</a>
+<button type="button" class="btn ghost" style="min-height: 44px; padding: 0 16px; font-size: 14px" data-action="theme" aria-label="Hell oder dunkel umschalten">Dunkel</button>
+</nav>
+<button type="button" class="menu-btn" data-action="menu" aria-expanded="false" aria-controls="menu-mob"><span class="ico-open"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span><span class="ico-close" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span><span class="menu-label">Menü</span></button>
+</div>
+<div class="menu-mob" id="menu-mob" hidden>
+<a href="neu-ab-2027.html" data-close-menu>Neu ab 2027</a>
+<a href="index.html#kurse" data-close-menu>Kurse</a>
+<a href="index.html#lokale" data-close-menu>Lokale</a>
+<a href="index.html#team" data-close-menu>Fahrlehrer/innen</a>
+<a href="index.html#faq" data-close-menu>FAQ</a>
+<a href="index.html#anmeldung" data-close-menu>Anmeldung</a>
+<a href="verwaltung/" data-close-menu>Login für Fahrlehrer/innen</a>
+<button type="button" class="btn ghost" style="min-height: 44px; padding: 0 16px; font-size: 14px" data-action="theme" aria-label="Hell oder dunkel umschalten">Dunkel</button>
+</div>
+</header>
+
+<!-- Inhalte aus dem Call mit den Fahrlehrer/innen, Dokument «Änderungen Homepage» (November 2026) -->
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px">
+<p style="margin: 0 0 16px"><span style="display: inline-block; background: var(--accent); color: var(--accentInk); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px">Neu ab 1. Januar 2027</span></p>
+<h1 class="t-haupt" style="margin: 0; font-size: clamp(34px, 4.6vw, 60px); line-height: 1.05">Alle Änderungen ab 2027 im Überblick</h1>
+<p style="margin: 24px 0 0; font-size: 19px; line-height: 1.55; color: var(--muted); max-width: 60ch">Ab dem 1. Januar 2027 ändert sich der Weg zum Führerausweis. Das Wichtigste auf einen Blick.</p>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px">
+<div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px">
+<span style="display: inline-flex; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--accentInk); align-items: center; justify-content: center; font-weight: 700" aria-hidden="true">1</span>
+<h2 class="serif" style="margin: 16px 0 10px; font-size: 21px; line-height: 1.25">VKU als Zulassung zur Theorieprüfung</h2>
+<p style="margin: 0; line-height: 1.6; color: var(--muted)">Du kannst dich erst zur Basistheorieprüfung anmelden, wenn du den VKU komplett abgeschlossen hast. Der Grund dafür ist, dass die VKU-Inhalte neu <strong>Teil der Theorieprüfung</strong> sind.</p>
+</div>
+<div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px">
+<span style="display: inline-flex; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--accentInk); align-items: center; justify-content: center; font-weight: 700" aria-hidden="true">2</span>
+<h2 class="serif" style="margin: 16px 0 10px; font-size: 21px; line-height: 1.25">Erweiterte Theorieprüfung</h2>
+<p style="margin: 0; line-height: 1.6; color: var(--muted)">Die Basistheorieprüfung wird von 50 auf <strong>55 Fragen</strong> aufgestockt. Es werden gezielt Fragen zu den Themen des VKU (z. B. Gefahrenwahrnehmung und Assistenzsysteme) gestellt.</p>
+</div>
+<div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px">
+<span style="display: inline-flex; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--accentInk); align-items: center; justify-content: center; font-weight: 700" aria-hidden="true">3</span>
+<h2 class="serif" style="margin: 16px 0 10px; font-size: 21px; line-height: 1.25">Kein Lernfahrausweis mehr nötig für den Kurs</h2>
+<p style="margin: 0; line-height: 1.6; color: var(--muted)">Da du den Kurs vor der Theorieprüfung machst, besitzt du logischerweise noch keinen Lernfahrausweis. Du musst diesen jedoch vorab beim Strassenverkehrsamt beantragen. Mit der erhaltenen Referenznummer (bzw. dem FABER-PIN) meldest du dich bei der Fahrschule an.</p>
+</div>
+<div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px">
+<span style="display: inline-flex; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--accentInk); align-items: center; justify-content: center; font-weight: 700" aria-hidden="true">4</span>
+<h2 class="serif" style="margin: 16px 0 10px; font-size: 21px; line-height: 1.25">Verteilung auf 4 separate Tage</h2>
+<p style="margin: 0; line-height: 1.6; color: var(--muted)">Die 4 Unterrichtsblöcke (weiterhin insgesamt 8 Stunden) <strong>müssen zwingend auf 4 Tage aufgeteilt werden</strong>. Zudem ist Block 1 immer als erstes zu besuchen.</p>
+</div>
+<div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px">
+<span style="display: inline-flex; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--accentInk); align-items: center; justify-content: center; font-weight: 700" aria-hidden="true">5</span>
+<h2 class="serif" style="margin: 16px 0 10px; font-size: 21px; line-height: 1.25">Neuer Pflichtinhalt: Fahrerassistenzsysteme (FAS)</h2>
+<p style="margin: 0; line-height: 1.6; color: var(--muted)">Da moderne Autos vollgepackt sind mit Technik, wird der sichere Umgang mit Notbremsassistenten, Spurhalteassistenten und automatisiertem Fahren zum festen und geprüften Bestandteil des Unterrichts.</p>
+</div>
+<div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px">
+<span style="display: inline-flex; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--accentInk); align-items: center; justify-content: center; font-weight: 700" aria-hidden="true">6</span>
+<h2 class="serif" style="margin: 16px 0 10px; font-size: 21px; line-height: 1.25">Reiner Präsenzunterricht bleibt Pflicht</h2>
+<p style="margin: 0; line-height: 1.6; color: var(--muted)">Der VKU darf weiterhin <strong>nicht online</strong> oder via E-Learning absolviert werden. Nur das Lernen für die Theorieprüfung läuft wie gewohnt über Apps.</p>
+</div>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 24px 88px; display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn" href="index.html#lokale">Zu den Terminen</a>
+<a class="btn ghost" href="index.html">Zurück zur Startseite</a>
+</section>
+
+<footer style="border-top: 1px solid var(--line)">
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: var(--muted)">
+<span>© 2026 Verkehrsschule Oberbaselbiet</span>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+<a href="verwaltung/">Login für Fahrlehrer/innen</a>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px 28px">
+<a href="https://avadam26.github.io/avadam/" target="_blank" rel="noopener" class="credit" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-size: 12px; color: var(--muted)">Webseite erstellt von<img class="credit-logo" src="bilder/avadam.svg" alt="AVADAM" style="height: 14px; width: auto; display: block"></a>
+</div>
+</footer>
+
+<div class="smoke" id="smoke" aria-hidden="true">
+<span style="left: -4px; --dx: -16px; animation-delay: 0s"></span>
+<span style="left: -2px; --dx: -10px; animation-delay: .18s"></span>
+<span style="left: 0px; --dx: -20px; animation-delay: .36s"></span>
+<span style="right: -4px; --dx: 16px; animation-delay: .09s"></span>
+<span style="right: -2px; --dx: 10px; animation-delay: .27s"></span>
+<span style="right: 0px; --dx: 20px; animation-delay: .45s"></span>
+</div>
+<button type="button" class="topcar" id="topcar" aria-label="Nach oben">
+<svg width="56" height="72" viewBox="0 0 56 72" aria-hidden="true">
+<rect x="4" y="12" width="6" height="14" rx="3" fill="#1B1F27"></rect>
+<rect x="46" y="12" width="6" height="14" rx="3" fill="#1B1F27"></rect>
+<rect x="4" y="48" width="6" height="14" rx="3" fill="#1B1F27"></rect>
+<rect x="46" y="48" width="6" height="14" rx="3" fill="#1B1F27"></rect>
+<rect x="8" y="4" width="40" height="64" rx="14" fill="#FFFFFF" stroke="#CFC9BF" stroke-width="1.5"></rect>
+<rect x="24" y="4.8" width="8" height="62.4" fill="#D7192A"></rect>
+<path d="M14 26 Q28 18 42 26 L39 34 Q28 30 17 34 Z" fill="#33404F"></path>
+<path d="M17 52 Q28 55 39 52 L41 58 Q28 62 15 58 Z" fill="#33404F"></path>
+<rect x="11" y="6" width="9" height="4" rx="2" fill="#FFE07A"></rect>
+<rect x="36" y="6" width="9" height="4" rx="2" fill="#FFE07A"></rect>
+<rect x="12" y="63" width="8" height="3" rx="1.5" fill="#D7192A"></rect>
+<rect x="36" y="63" width="8" height="3" rx="1.5" fill="#D7192A"></rect>
+</svg>
+</button>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
