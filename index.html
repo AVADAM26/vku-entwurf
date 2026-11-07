@@ -69,6 +69,11 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 .faq summary::after{content:"+";font-size:28px;font-weight:400;line-height:1;color:var(--muted);transition:transform .2s}
 .faq[open] summary::after{transform:rotate(45deg)}
 .faq p{margin:0 0 22px;font-size:17px;line-height:1.65;color:var(--muted);max-width:62ch}
+.kurs-info summary{padding:16px 0;font-size:17px}
+.kurs-info p{font-size:15px;margin:0 0 12px}
+.kurs-info ul{margin:0 0 16px;padding-left:18px;font-size:15px;line-height:1.6;color:var(--muted)}
+.kurs-info li{margin-bottom:6px}
+.kurs-info strong{color:var(--ink);font-weight:600}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"text img" "btns .";column-gap:56px;row-gap:36px}
 .hero-text{grid-area:text}.hero-img{grid-area:img;min-height:320px;position:relative}.hero-img img{position:absolute;inset:0}.hero-btns{grid-area:btns}
 @media (max-width: 860px){.hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "img" "btns";row-gap:28px}.hero-img{aspect-ratio:10/9;min-height:0}}
@@ -146,16 +151,37 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px">
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Kurs</p>
 <h2 class="t-kurs" style="margin: 8px 0 12px; font-size: clamp(26px, 6.4vw, 34px); line-height: 1.1; hyphens: auto; overflow-wrap: break-word">Verkehrskunde&shy;unterricht</h2>
-<p style="margin: 0 0 24px; line-height: 1.6; color: var(--muted)">4 Abende à 2 Lektionen zu Gefahrenlehre, Verkehrsumwelt, Verkehrssinnbildung, Fahrphysik und verantwortungsbewusstem Verhalten im Verkehr. Bis Ende 2026 brauchst du dafür einen gültigen Lernfahrausweis der Kategorie A, A1, B oder B1. Ab 2027 machst du den VKU schon vor der Theorieprüfung. Die Kursbestätigung ist unbeschränkt gültig.</p>
+<p style="margin: 0 0 24px; line-height: 1.6; color: var(--muted)">Der Verkehrskundeunterricht (VKU) ist ein staatlich vorgeschriebener Theoriekurs, der angehende Auto- und Motorradfahrende optimal auf die Praxis im Strassenverkehr vorbereiten soll. Er dient dazu, den Verkehrssinn zu schärfen, Gefahren frühzeitig zu erkennen und eine defensive, verantwortungsbewusste Fahrweise zu fördern. Der Kurs dauert 8 Stunden und ist auf 4 Abende verteilt. Die Kursbestätigung ist unbeschränkt gültig!</p>
 <p style="margin: 0; font-size: 28px; font-weight: 700" data-preis="vku">CHF XX.XX</p>
 <p style="margin: 4px 0 0; font-size: 15px; color: var(--muted)">inklusive Lernmaterial</p>
 </div>
 <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px">
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Kurs</p>
 <h2 class="t-kurs" style="margin: 8px 0 12px; font-size: clamp(26px, 6.4vw, 34px); line-height: 1.1; hyphens: auto; overflow-wrap: break-word">Nothelferkurs</h2>
-<p style="margin: 0 0 24px; line-height: 1.6; color: var(--muted)">Braucht es für den Lernfahrausweis. 10 Stunden inklusive Pausen, verteilt auf mindestens zwei Tage. Die Bescheinigung ist 6 Jahre gültig. [Kurzbeschreibung folgt]</p>
+<p style="margin: 0 0 16px; line-height: 1.6; color: var(--muted)">Der Nothelferkurs ist ein gesetzlich vorgeschriebener, 10-stündiger Kurs in lebensrettenden Sofortmassnahmen. Er vermittelt das theoretische und praktische Grundwissen, um bei Verkehrsunfällen oder medizinischen Notfällen im Alltag rasch und richtig Erste Hilfe zu leisten. Den Kurs musst du gemacht haben, damit du überhaupt zur Theorieprüfung zugelassen wirst.</p>
+<div style="margin: 0 0 24px">
+<details class="faq kurs-info"><summary>Die Kerninhalte</summary>
+<p>Der Kurs ist stark praxisorientiert und deckt diese Schwerpunkte ab:</p>
+<ul>
+<li><strong>Verhalten bei Unfällen:</strong> Unfallstelle absichern, den Überblick behalten und auf den Eigenschutz achten.</li>
+<li><strong>Alarmierung:</strong> Notruf richtig absetzen (Sanität 144, Polizei 117, Feuerwehr 118) und Notruf-Apps nutzen.</li>
+<li><strong>Lebensrettende Sofortmassnahmen:</strong> Bewusstlose richtig lagern (stabile Seitenlage) und starke Blutungen stillen.</li>
+<li><strong>Reanimation (BLS-AED):</strong> Herz-Lungen-Wiederbelebung (Herzdruckmassage und Beatmung) und der sichere Einsatz eines automatisierten Defibrillators (AED).</li>
+</ul>
+</details>
+<details class="faq kurs-info"><summary>Wichtigste Fakten</summary>
+<ul>
+<li><strong>Dauer:</strong> Insgesamt 10 Stunden, oft aufgeteilt auf ein Wochenende oder zwei bis drei Abende.</li>
+<li><strong>Preis:</strong> <span data-preis="nothelfer">CHF XX.XX</span> inklusive Ausweis.</li>
+<li><strong>Gültigkeit:</strong> Die Bescheinigung ist in der Schweiz 6 Jahre gültig.</li>
+<li><strong>Prüfung:</strong> Es gibt keine Abschlussprüfung. Wenn du bei allen Lektionen aktiv mitmachst, bekommst du die Bestätigung.</li>
+</ul>
+<p><strong>Variante Blended Learning oder E-Learning:</strong> Statt im herkömmlichen Nothelferkurs kannst du den gleichen Inhalt auch in zwei Teilen lernen. Zuerst die Theorie im Selbststudium, danach den Praxisteil mit Fallbeispielen bei einem Samariterverein deiner Wahl.</p>
+</details>
+</div>
 <p style="margin: 0; font-size: 28px; font-weight: 700" data-preis="nothelfer">CHF XX.XX</p>
-<p style="margin: 4px 0 0; font-size: 15px; color: var(--muted)">inklusive Ausweis</p>
+<p style="margin: 4px 0 20px; font-size: 15px; color: var(--muted)">inklusive Ausweis</p>
+<a class="btn" style="text-align: center; padding: 10px 24px; line-height: 1.3" href="https://www.samariter-basel.ch/de/nothilfekurs-blended-learning" target="_blank" rel="noopener">Anmeldung bei den Samaritern Basel</a>
 </div>
 </div>
 </section>

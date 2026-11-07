@@ -63,3 +63,9 @@ Offen nach dieser Sitzung: siehe CLAUDE.md «Noch offen», insbesondere Hosting,
 | Alle ausgefüllten Knöpfe einheitlich blau (vorher «Termine ansehen», «Mehr Informationen», «Zu den Fahrlehrer/innen», «+ Neuer Termin» schwarz). Umrandete Knöpfe bleiben. CLAUDE.md nachgeführt. | 8ff4678 |
 
 Offen aus dem gleichen Dokument: neue Texte für die Kurskarten VKU und Nothilfe, Nothilfe-Seiten «Kerninhalte», «Wichtigste Fakten», «Anmeldung» (Samariter Basel). Die Zahl «55 Fragen» noch mit einer Quelle prüfen.
+
+## 7. November 2026 · Dani mit Claude, Kurskarten
+
+| Änderung | Commit |
+|---|---|
+| Kurskarten VKU und Nothelfer: neue Texte aus dem Dokument der Fahrlehrer/innen. Nothelfer mit «Die Kerninhalte» und «Wichtigste Fakten» zum Aufklappen und Knopf «Anmeldung bei den Samaritern Basel». «Nothelferkurs» statt «Nothilfekurs», Blended Learning per Du. | (siehe unten) |
