@@ -56,5 +56,6 @@ Offen nach dieser Sitzung: siehe CLAUDE.md «Noch offen», insbesondere Hosting,
 | Änderung | Commit |
 |---|---|
 | Neuer Reiter «Neu ab 2027» ganz links im Menü, gleiche Optik wie die anderen. Neue Seite `neu-ab-2027.html` mit «Alle Änderungen ab 2027 im Überblick» (sechs Punkte aus dem Dokument der Fahrlehrer/innen). | 07965d2 |
+| Infobox «Neu ab 1. Januar 2027»: «Mehr Informationen» führt jetzt auf die Seite «Neu ab 2027» statt aufs ASTRA. Die ASTRA-Quelle bleibt unter «Quellen». | 638dd71 |
 
 Offen aus dem gleichen Dokument: neuer Text in der Box «Neu ab 1. Januar 2027» mit Link St. Gallen (gilt auch für BL/BS/AG/SO), neue Texte für die Kurskarten VKU und Nothilfe, Nothilfe-Seiten «Kerninhalte», «Wichtigste Fakten», «Anmeldung» (Samariter Basel). Die Zahl «55 Fragen» noch mit einer Quelle prüfen.
