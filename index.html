@@ -20,8 +20,8 @@ a{color:var(--ink)}a:hover{color:var(--muted)}
 .t-lokale{font-family:"Space Grotesk","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
 input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-height:48px;box-sizing:border-box;width:100%}
 input:focus{outline:2px solid var(--accent);outline-offset:1px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:none;background:var(--ink);color:var(--bg);font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
-.btn:hover{color:var(--bg);opacity:.88}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:none;background:var(--accent);color:var(--accentInk);font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{color:var(--accentInk);opacity:.88}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .btn.ghost:hover{color:var(--ink);border-color:var(--ink)}
 .slot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
@@ -186,7 +186,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Gewählter Kurs</p>
 <p style="margin: 6px 0 0; font-size: 18px; font-weight: 600"><span id="gewaehlt">Bitte oben bei einem Lokal einen Termin wählen</span></p>
 </div>
-<button type="button" class="btn" id="zu-terminen" data-action="lokale" style="background: var(--accent); color: var(--accentInk)">Zu den Terminen ↑</button>
+<button type="button" class="btn" id="zu-terminen" data-action="lokale">Zu den Terminen ↑</button>
 <button type="button" id="aendern" data-action="lokale" hidden style="background: transparent; border: none; padding: 0 4px; min-height: 44px; font: inherit; font-size: 15px; font-weight: 600; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer">Ändern</button>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
@@ -209,7 +209,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <div aria-hidden="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden"><label>Bitte leer lassen<input type="text" name="website" tabindex="-1" autocomplete="off" id="hp"></label></div>
 <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: var(--muted)"><input type="checkbox" name="einverstanden" required style="width: 22px; min-height: 22px; height: 22px; margin-top: 2px; flex-shrink: 0"><span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben für die Kursorganisation verwendet werden.</span></label>
 <p id="formular-fehler" hidden role="alert" style="margin: 0; font-size: 15px; font-weight: 600; color: #B42318"></p>
-<button type="submit" class="btn" style="align-self: flex-start; background: var(--accent); color: var(--accentInk)" data-action="send">Verbindlich anmelden</button>
+<button type="submit" class="btn" style="align-self: flex-start" data-action="send">Verbindlich anmelden</button>
 </div>
 </form>
 <div id="danke" hidden>
