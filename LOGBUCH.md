@@ -68,4 +68,4 @@ Offen aus dem gleichen Dokument: neue Texte für die Kurskarten VKU und Nothilfe
 
 | Änderung | Commit |
 |---|---|
-| Kurskarten VKU und Nothelfer: neue Texte aus dem Dokument der Fahrlehrer/innen. Nothelfer mit «Die Kerninhalte» und «Wichtigste Fakten» zum Aufklappen und Knopf «Anmeldung bei den Samaritern Basel». «Nothelferkurs» statt «Nothilfekurs», Blended Learning per Du. | 7ef4156 |
+| Kurskarten VKU und Nothelfer: neue Texte aus dem Dokument der Fahrlehrer/innen. Nothelfer mit «Die Kerninhalte» und «Wichtigste Fakten» zum Aufklappen und Knopf «Anmeldung bei den Samaritern Basel». «Nothelferkurs» statt «Nothilfekurs», Blended Learning per Du. | d5ae10a |
