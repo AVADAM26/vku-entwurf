@@ -44,3 +44,9 @@ Ziel: Seite pflegbar machen (Mini-CMS), Anmeldung mit Platzlimite, Feinschliff a
 Bewusst nicht gebaut: «Beliebt»-Icon, Warteliste, Teilnehmerliste auf dem Server (Datenschutz), Rahmen um die Kursblöcke.
 
 Offen nach dieser Sitzung: siehe CLAUDE.md «Noch offen», insbesondere Hosting, Logins und `konfig.php` auf Hostpoint, echte Termine und Preise, Adresse Liestal, Fototermin, Entscheid der Fahrlehrer zum Login im Menü.
+
+## 7. November 2026 · Dani mit Claude
+
+| Änderung | Commit |
+|---|---|
+| Adresse Lokal Liestal eingetragen: Sichternstrasse 7, 4410 Liestal. «Route planen» führt jetzt zur Adresse. | 3842061 |
