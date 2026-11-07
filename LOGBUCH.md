@@ -60,5 +60,6 @@ Offen nach dieser Sitzung: siehe CLAUDE.md «Noch offen», insbesondere Hosting,
 | Infobox «Neu ab 1. Januar 2027»: neuer Text aus dem Dokument der Fahrlehrer/innen (zwei Kleinigkeiten korrigiert: «Den Verkehrskundeunterricht», «des VKU»). Bei der Quelle St. Gallen «gilt auch für die Kantone BL, BS, AG und SO». | c869d1b |
 | Linktext St. Gallen neu: «Kanton St. Gallen, Neuerungen in der Fahrausbildung 2027, gilt auch für die Kantone BL, BS, AG und SO», der Hinweis gehört jetzt zum Link. | ea3fd5f |
 | Infobox: «Mehr Informationen» ist jetzt ein Knopf im gleichen Stil wie «Termine ansehen» oben (schwarz, im Dunkelmodus hell), statt Textlink mit Pfeil. | aa4f5da |
+| Alle ausgefüllten Knöpfe einheitlich blau (vorher «Termine ansehen», «Mehr Informationen», «Zu den Fahrlehrer/innen», «+ Neuer Termin» schwarz). Umrandete Knöpfe bleiben. CLAUDE.md nachgeführt. | 8ff4678 |
 
 Offen aus dem gleichen Dokument: neue Texte für die Kurskarten VKU und Nothilfe, Nothilfe-Seiten «Kerninhalte», «Wichtigste Fakten», «Anmeldung» (Samariter Basel). Die Zahl «55 Fragen» noch mit einer Quelle prüfen.
