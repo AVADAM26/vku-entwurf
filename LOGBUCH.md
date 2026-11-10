@@ -11,6 +11,7 @@ Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide 
 | FAQ: Platzhalter «Was sonst noch mitzubringen ist» und «Gilt das auch für Fahrschüler anderer Fahrschulen?» entfernt; neu «Anmelden kann sich jede und jeder.» |
 | Footer «© 2027». CLAUDE.md nachgeführt. |
 | Kasten «Neu seit 1. Januar 2027»: Text über die volle Breite der Box (vorher max. 70 Zeichen), mehr Abstand zwischen Knopf und Quellen. |
+| FAQ: Bezahlen «Mit TWINT oder bar.», Bestätigung «per E-Mail» (Dani). |
 
 ## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
 
