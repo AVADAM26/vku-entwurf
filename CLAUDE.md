@@ -26,7 +26,7 @@ Die neun: Rahel Schaffner, Ken Klauser, Dominic Imhof, Georg Schweingruber, Chri
 
 ```
 index.html        Startseite: Kurse, Lokale, Fahrlehrer, Anmeldung, FAQ
-neu-ab-2027.html  Unterseite «Neu ab 2027»: alle Änderungen ab 2027 im Überblick (Reiter ganz links im Menü)
+neu-ab-2027.html  Unterseite «Der Weg zum Führerschein» (bis 10.11.2026 «Neu ab 2027»), Reiter ganz links im Menü; Dateiname bleibt
 impressum.html    Impressum
 datenschutz.html  Datenschutzerklärung
 app.js            Hell/Dunkel, Klappmenü, lädt daten/*.json und baut Lokale, Termine, Fahrlehrer, Preise; Formular, Auto nach oben
@@ -91,6 +91,10 @@ Entschieden am 2. November 2026 (Adi), gebaut mit Claude, vor dem Call mit den F
 - **Anmeldeformular:** Vorname, Name, Adresse, FABER-PIN mit Hinweis „Die PIN, die du vom Strassenverkehrsamt bekommen hast“ und daneben **Geburtsdatum** (halbe Breite nebeneinander, Wunsch der Fahrlehrer/innen, 2. November 2026; Datumsfeld, in der E-Mail als TT.MM.JJJJ, auch in `anmeldung.php` und in der Datenschutzerklärung), E-Mail (seit 2. November 2026, für die Bestätigung), Telefon, Einverständnis zum Datenschutz. Unsichtbares Spamschutz-Feld. Pflichtfelder werden geprüft.
 - **Logins:** Neu (Call vom 2. November 2026): **Zwei Fahrlehrer/innen bekommen Zugriff und übernehmen die Verwaltung.** Wie genau, klärt Dani mit Adi; bis dahin technisch unverändert. Früher geplant: Jeder Fahrlehrer bekommt ein eigenes Login, alle dürfen alle Kurstermine bearbeiten. Umgesetzt in `verwaltung/` (siehe «Datendateien und Verwaltung»). Der Link «Login für Fahrlehrer» im Footer führt dorthin, seit dem 2. November 2026 auch der Menüpunkt «Login» im Kopf (Desktop) beziehungsweise «Login für Fahrlehrer» im Klappmenü (Handy). Vorläufig, damit man im Call direkt hinklicken kann; ob die Fahrlehrer den Eingang im Menü oder nur als Link wollen, entscheiden sie.
 - **Footer:** unten links dezent „Webseite erstellt von“ mit AVADAM Logo, verlinkt auf https://avadam26.github.io/avadam/. Im Impressum „Konzept und Umsetzung: AVADAM, Human + Technology. Together.“ Die Firma heisst AVADAM, in Texten ohne Bindestrich.
+
+## Texte aus Sicht 2027
+
+Die Seite geht im Januar 2027 live. Darum stehen alle Texte so, als wären wir schon im Jahr 2027: keine Regeln «bis Ende 2026», kein «ab 2027 neu», keine alten Zahlen wie «von 50 auf 55 Fragen» (Dani, 10. November 2026). Copyright im Footer «© 2027». Bei neuen Texten genauso schreiben.
 
 ## Datenschutz
 

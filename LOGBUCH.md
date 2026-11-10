@@ -2,6 +2,15 @@
 
 Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide und Gründe stehen ausführlich in `CLAUDE.md`.
 
+## 10. November 2026 · Dani mit Claude, vor dem Treffen der Fahrlehrer/innen
+
+| Änderung |
+|---|
+| Alle Texte aus Sicht 2027 geschrieben (Seite geht im Januar 2027 live): FAQ ohne «bis Ende 2026» und «ab 2027», Theorieprüfung «enthält 55 Fragen», Unterseite ohne «neu», «weiterhin», «bleibt». |
+| Menüpunkt und Titel der Unterseite: «Der Weg zum Führerschein» statt «Neu ab 2027» bzw. «Alle Änderungen ab 2027 im Überblick». Etiketten «Gilt seit» bzw. «Neu seit 1. Januar 2027». |
+| FAQ: Platzhalter «Was sonst noch mitzubringen ist» und «Gilt das auch für Fahrschüler anderer Fahrschulen?» entfernt; neu «Anmelden kann sich jede und jeder.» |
+| Footer «© 2027». CLAUDE.md nachgeführt. |
+
 ## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
 
 Wünsche aus dem Call umgesetzt.
