@@ -82,7 +82,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 .spot{position:absolute;padding:0;margin:0;border:0;background:transparent;cursor:pointer;border-radius:12px}
 .spot:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .pop{position:absolute;left:50%;top:50%;z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 10px 8px;background:#FFFFFF;color:#1B1F27;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.22);font-size:13px;font-weight:700;white-space:nowrap;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .18s ease,transform .18s ease}
-.pop img{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block}
+.pop img{width:106px;height:106px;border-radius:50%;object-fit:cover;display:block}
 .spot:hover .pop,.spot:focus-visible .pop,.spot.an .pop{opacity:1;transform:translate(-50%,-50%) scale(1)}
 @media (prefers-reduced-motion: reduce){.pop{transition:none}}.hero-btns{grid-area:btns}
 @media (max-width: 860px){.hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "img" "btns";row-gap:28px}.hero-img{aspect-ratio:10/9;min-height:0}}
