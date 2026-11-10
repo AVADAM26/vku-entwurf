@@ -75,7 +75,16 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 .kurs-info li{margin-bottom:6px}
 .kurs-info strong{color:var(--ink);font-weight:600}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"text img" "btns .";column-gap:56px;row-gap:36px}
-.hero-text{grid-area:text}.hero-img{grid-area:img;min-height:320px;position:relative}.hero-img img{position:absolute;inset:0}.hero-btns{grid-area:btns}
+.hero-text{grid-area:text}.hero-img{grid-area:img;min-height:400px;position:relative}.hero-img > img{position:absolute;inset:0}
+.logo-karte{position:absolute;inset:0;background:#FFFFFF;border:1px solid var(--line);border-radius:20px;padding:14px;display:flex;align-items:center;justify-content:center;container-type:size}
+.logo-bild{position:relative;width:min(100cqw,calc(100cqh * 1360 / 1047));aspect-ratio:1360/1047}
+.logo-bild > img{display:block;width:100%;height:100%}
+.spot{position:absolute;padding:0;margin:0;border:0;background:transparent;cursor:pointer;border-radius:12px}
+.spot:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pop{position:absolute;left:50%;top:50%;z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 10px 8px;background:#FFFFFF;color:#1B1F27;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.22);font-size:13px;font-weight:700;white-space:nowrap;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .18s ease,transform .18s ease}
+.pop img{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block}
+.spot:hover .pop,.spot:focus-visible .pop,.spot.an .pop{opacity:1;transform:translate(-50%,-50%) scale(1)}
+@media (prefers-reduced-motion: reduce){.pop{transition:none}}.hero-btns{grid-area:btns}
 @media (max-width: 860px){.hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "img" "btns";row-gap:28px}.hero-img{aspect-ratio:10/9;min-height:0}}
 .menu-btn{display:none;align-items:center;gap:8px;min-height:44px;padding:0 14px;margin-left:auto;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:15px;font-weight:600;cursor:pointer}
 .menu-mob{display:none}
@@ -125,7 +134,19 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <p style="margin: 28px 0 0; font-size: 20px; line-height: 1.5; color: var(--muted); max-width: 46ch">Wähle dein Lokal, suche dir einen Termin aus und melde dich direkt online an. Einfacher geht’s nicht.</p>
 </div>
 <div class="hero-img">
-<img src="bilder/platzhalter-lokal.svg" alt="Platzhalter: Lokal mit Fahrlehrer/innen und Fahrschulauto" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; border-radius: 20px; border: 1px solid var(--line)">
+<!-- Logo der Verkehrsschule (von den Fahrlehrer/innen, 10. November 2026). Über einem Fahrschul-Logo erscheint das Foto der Person. -->
+<div class="logo-karte">
+<div class="logo-bild">
+<img src="bilder/logo-verkehrsschule.webp" width="1360" height="1047" alt="Logo Verkehrsschule Oberbaselbiet mit den Logos der Fahrschulen" fetchpriority="high">
+<button type="button" class="spot" style="left: 30%; top: 1%; width: 30%; height: 22%" aria-label="Roger Schreiber"><span class="pop"><img src="bilder/roger-schreiber.jpg" alt="" loading="lazy" decoding="async" style="object-position: 50% 30%"><span>Roger Schreiber</span></span></button>
+<button type="button" class="spot" style="left: 64%; top: 15%; width: 34%; height: 19%" aria-label="Ken Klauser"><span class="pop"><img src="bilder/ken-klauser.jpg" alt="" loading="lazy" decoding="async" style="object-position: 50% 20%"><span>Ken Klauser</span></span></button>
+<button type="button" class="spot" style="left: 71%; top: 38%; width: 28%; height: 19%" aria-label="Rahel Schaffner"><span class="pop"><img src="bilder/rahel-schaffner.jpg" alt="" loading="lazy" decoding="async" style="object-position: 40% 50%"><span>Rahel Schaffner</span></span></button>
+<button type="button" class="spot" style="left: 63%; top: 72%; width: 25%; height: 24%" aria-label="Thomas Egenter"><span class="pop"><img src="bilder/thomas-egenter.jpg" alt="" loading="lazy" decoding="async" style="object-position: 78% 40%"><span>Thomas Egenter</span></span></button>
+<button type="button" class="spot" style="left: 17%; top: 84%; width: 29%; height: 15%" aria-label="Christian Wüthrich"><span class="pop"><img src="bilder/christian-wuethrich.jpg" alt="" loading="lazy" decoding="async" style="object-position: 64% 30%"><span>Christian Wüthrich</span></span></button>
+<button type="button" class="spot" style="left: 2%; top: 49%; width: 29%; height: 28%" aria-label="Thomas Stuck"><span class="pop"><img src="bilder/thomas-stuck.jpg" alt="" loading="lazy" decoding="async" style="object-position: 76% 20%"><span>Thomas Stuck</span></span></button>
+<button type="button" class="spot" style="left: 0%; top: 25%; width: 33%; height: 14%" aria-label="Cornelia Zumbrunn"><span class="pop"><img src="bilder/cornelia-zumbrunn.jpg" alt="" loading="lazy" decoding="async" style="object-position: 52% 50%"><span>Cornelia Zumbrunn</span></span></button>
+</div>
+</div>
 </div>
 <div class="hero-btns" style="display: flex; flex-wrap: wrap; gap: 12px">
 <a class="btn" href="#lokale">Termine ansehen</a>

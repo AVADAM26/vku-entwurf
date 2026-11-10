@@ -306,6 +306,13 @@
   });
 
   // Auto unten rechts: erscheint nach etwas Scrollen, raucht kurz und fährt dann nach oben.
+  // Logo oben: Auf dem Handy (ohne Hover) zeigt Antippen das Foto, nochmals Tippen oder Tippen daneben blendet es aus.
+  document.addEventListener('click', function (e) {
+    var spot = e.target.closest ? e.target.closest('.spot') : null;
+    document.querySelectorAll('.spot.an').forEach(function (s) { if (s !== spot) s.classList.remove('an'); });
+    if (spot) spot.classList.toggle('an');
+  });
+
   var car = document.getElementById('topcar');
   var smoke = document.getElementById('smoke');
   var phase = 'idle';

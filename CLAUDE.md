@@ -73,7 +73,7 @@ Entschieden am 2. November 2026 (Adi), gebaut mit Claude, vor dem Call mit den F
 - **Neutral, keine Kantonsfarben.** Das BL-Rot wirkt amtlich (man könnte die Seite für eine Seite vom Kanton oder Strassenverkehrsamt halten), und Rot steht im Verkehr für Stopp. Das Wappen und das Logo des Kantons sind als Marke geschützt und dürfen nicht verwendet werden. Den regionalen Bezug holen wir über Fotos und Sprache.
 - **Hell/Dunkel-Modus** gehört bei allen AVADAM-Seiten dazu. Die Wahl wird gespeichert.
 - **Back-to-Top-Auto** (unten rechts, erscheint beim Scrollen). Das ist Danis Markenzeichen, nicht ändern. Weiss mit rotem Streifen: erinnert an die Baselbieter Farben, ohne das geschützte Wappen. Beim Antippen drehen zuerst die Reifen mit Rauch durch, dann fährt es hoch. Das soll verspielt wirken und einen kleinen Bruch zur ruhigen Seite geben. Wer auf dem Gerät „Bewegung reduzieren“ eingeschaltet hat, bekommt bewusst keinen Rauch und kein Rütteln, das Auto fährt dann direkt.
-- **Bild oben:** Die gezeichnete Illustration ist nur ein Platzhalter für ein Gruppenfoto aller neun vor einem Lokal. Das Bild schliesst oben bündig mit der kleinen Zeile über dem Titel ab und unten mit dem Einleitungstext.
+- **Logo rechts vom Titel** (Wunsch der Fahrlehrer/innen, 10. November 2026, statt der Platzhalter-Illustration; oben links im Kopf wäre es zu klein): `bilder/logo-verkehrsschule.webp` aus dem PDF der Fahrlehrer/innen, auf einer weissen Karte (auch im Dunkelmodus, weil das Logo dunkle Schrift hat). Über jedem Fahrschul-Logo liegt ein unsichtbarer Knopf (`.spot`, Position in Prozent); beim Darüberfahren oder Antippen erscheint das runde Foto mit Namen. Im Logo fehlen noch Dominic Imhof und Georg Schweingruber, sobald ihre Logos drin sind, zwei Knöpfe ergänzen. Die alte Illustration `bilder/platzhalter-lokal.svg` bleibt im Ordner. Wohin das geplante Gruppenfoto kommt, ist offen.
 - **Handy:** Menü als Klappmenü (Knopf „Menü“). Auf dem Desktop bleibt das Menü ausgeschrieben. Auf Wunsch der Fahrlehrer.
 - **Lokal-Karten auf einer Ebene** (Adi, 2. November 2026): Die drei Karten teilen sich ein Zeilenraster (CSS Subgrid): Foto, Kopf mit Ort und Adresse, dann pro Kurs ein Block. Jede Zeile ist in allen Karten gleich hoch, darum stehen «VKU» und «Nothelfer» überall auf derselben Höhe, auch wenn eine Karte mehr Adresszeilen oder Termine hat. «Route planen» sitzt am unteren Rand des Kopf-Bereichs, darum liegen auch die drei Links auf einer Linie. Ohne Subgrid-Unterstützung fällt die Karte auf die alte Spaltenform zurück.
 
@@ -107,7 +107,7 @@ Die Seite geht im Januar 2027 live. Darum stehen alle Texte so, als wären wir s
 
 ## Noch offen
 
-- Echtes Logo der Verkehrsschule Oberbaselbiet (im Kopf steht noch ein Platzhalter „Logo“).
+- Logo im Kopf: dort steht noch der Platzhalter „Logo“. Das echte Logo steht rechts vom Titel (siehe «Logo rechts vom Titel»); was in den Kopf kommt, ist offen.
 - Gruppenfoto aller neun statt der Platzhalter-Illustration. Vorschlag: gemeinsamer Fototermin mit Adi.
 - Kurzportraits der Fahrlehrer (teils „[Kurzportrait folgt]“).
 - Fotos von Rahel Schaffner und Cornelia Zumbrunn: Bis jetzt gibt es von beiden nur ein Bild ihres Fahrschulautos, das steht vorläufig auf ihrer Karte.
