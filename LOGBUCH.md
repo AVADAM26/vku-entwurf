@@ -12,6 +12,7 @@ Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide 
 | Footer «© 2027». CLAUDE.md nachgeführt. |
 | Kasten «Neu seit 1. Januar 2027»: Text über die volle Breite der Box (vorher max. 70 Zeichen), mehr Abstand zwischen Knopf und Quellen. |
 | FAQ: Bezahlen «Mit TWINT oder bar.», Bestätigung «per E-Mail» (Dani). |
+| FAQ Abmeldung: bis 72 Stunden vorher kostenlos, danach voller Betrag (noch in Abklärung). Antworten aus dem Aufgaben-Dokument in CLAUDE.md, ohne Namen. |
 
 ## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
 
