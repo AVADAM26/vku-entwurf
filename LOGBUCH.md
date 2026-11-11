@@ -17,6 +17,12 @@ Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide 
 | Fotos im Logo 10 % grösser (106 statt 96 Pixel). |
 | Kurzportrait Roger Schreiber aus seinem ausgefüllten Fragebogen. |
 
+## 11. November 2026 · Dani mit Claude
+
+| Änderung |
+|---|
+| Datenschutz: «Wer sieht deine Daten?» ausformuliert (E-Mail an die Verwaltenden, Weitergabe an die anderen soweit nötig, niemand ausserhalb der neun). «Alle Daten liegen auf Servern in der Schweiz» ersetzt durch «Die Webseite und das Anmeldeformular laufen auf Servern in der Schweiz». |
+
 ## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
 
 Wünsche aus dem Call umgesetzt.

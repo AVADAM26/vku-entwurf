@@ -103,6 +103,7 @@ Die Seite geht im Januar 2027 live. Darum stehen alle Texte so, als wären wir s
 - Keine Besucherstatistik, keine Werbe- oder Analyse-Cookies.
 - Server-Logdaten nur so lange wie nötig. Konkrete Dauer beim Hosting klären und möglichst kurz einstellen.
 - Die Schriften liegen seit dem 2. November 2026 lokal in `schriften/` (alle SIL Open Font License, Hanken als variable Schrift für 400 bis 700). Kein Aufruf mehr an Google, auf keiner der vier Seiten. Die Pfade in `schriften.css` sind relativ zur CSS-Datei (`url(datei.woff2)`), nicht `url(schriften/…)`, sonst lädt der Browser die Schriften nicht.
+- **Wer sieht die Daten** (Dani, 11. November 2026): Anmeldungen kommen per E-Mail bei den Fahrlehrer/innen an, welche die Kurse verwalten, und werden an die anderen weitergegeben, soweit nötig. Bewusst ohne Namen und ohne Kanal (die Fahrlehrer/innen tauschen sich in einem Gruppenchat aus). Darum heisst es auch «Die Webseite und das Anmeldeformular laufen auf Servern in der Schweiz», nicht «Alle Daten liegen in der Schweiz». Verantwortlich im Sinn des DSG sind die Fahrlehrer/innen, die Allware AG speichert in ihrem Auftrag.
 - Kontaktperson im Impressum und Datenschutz ist noch ein Platzhalter (Max Muster).
 
 ## Noch offen
