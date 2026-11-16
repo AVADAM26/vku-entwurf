@@ -23,6 +23,12 @@ Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide 
 |---|
 | Datenschutz: «Wer sieht deine Daten?» ausformuliert (E-Mail an die Verwaltenden, Weitergabe an die anderen soweit nötig, niemand ausserhalb der neun). «Alle Daten liegen auf Servern in der Schweiz» ersetzt durch «Die Webseite und das Anmeldeformular laufen auf Servern in der Schweiz». |
 
+## 16. November 2026 · Dani mit Claude
+
+| Änderung |
+|---|
+| Kopf: Platzhalter «Logo» und Schriftzug «Verkehrsschule Oberbaselbiet» oben links entfernt, auf allen vier Seiten. Menü bzw. Knöpfe stehen jetzt rechts. |
+
 ## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
 
 Wünsche aus dem Call umgesetzt.
