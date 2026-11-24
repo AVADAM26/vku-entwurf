@@ -37,6 +37,7 @@ Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide 
 | Titelschrift: Montserrat für alle Titel (Wahl der Fahrlehrer/innen), Archivo und Space Grotesk gelöscht, Montserrat 700 ergänzt. |
 | VKU-Preis CHF 190.00, «inklusive Lernmaterial» entfernt. |
 | Überall «Führerausweis» statt «Führerschein» (Menü, Titel der Unterseite). |
+| Unterseite «Der Weg zum Führerausweis»: Ablauf in 7 Schritten bildlich (angelehnt an VKS Schwyz, eigener Stil), sechs Karten neu unter «Gut zu wissen zum VKU». |
 
 ## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
 
