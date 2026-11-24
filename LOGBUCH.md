@@ -38,6 +38,7 @@ Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide 
 | VKU-Preis CHF 190.00, «inklusive Lernmaterial» entfernt. |
 | Überall «Führerausweis» statt «Führerschein» (Menü, Titel der Unterseite). |
 | Unterseite «Der Weg zum Führerausweis»: Ablauf in 7 Schritten bildlich (angelehnt an VKS Schwyz, eigener Stil), sechs Karten neu unter «Gut zu wissen zum VKU». |
+| Unterseite: WAB-Link öffnet in neuem Tab; oben links «← Zurück zur Startseite». |
 
 ## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
 
