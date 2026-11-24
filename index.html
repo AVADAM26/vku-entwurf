@@ -14,10 +14,10 @@ body{margin:0}
 .site.dark{--bg:#0F1012;--surface:#181A1D;--line:#2A2D31;--ink:#F2F1EE;--muted:#A8A6A1;--accent:#2F6BC8;--accentInk:#FFFFFF;--soft:#1D2024}
 a{color:var(--ink)}a:hover{color:var(--muted)}
 /* Titel ohne Serifen (Wunsch der Fahrlehrer/innen, 2. November 2026). Drei Titel zeigen je eine Schrift zur Auswahl. */
-.serif{font-family:"Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
+.serif{font-family:"Montserrat","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
 .t-haupt{font-family:"Montserrat","Hanken Grotesk",system-ui,sans-serif;font-weight:800;letter-spacing:-0.025em}
-.t-kurs{font-family:"Archivo","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.01em}
-.t-lokale{font-family:"Space Grotesk","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
+.t-kurs{font-family:"Montserrat","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
+.t-lokale{font-family:"Montserrat","Hanken Grotesk",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em}
 input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-height:48px;box-sizing:border-box;width:100%}
 input:focus{outline:2px solid var(--accent);outline-offset:1px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:none;background:var(--accent);color:var(--accentInk);font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
@@ -125,7 +125,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <section id="top" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 72px">
 <div class="hero">
 <div class="hero-text">
-<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)"><span style="white-space: nowrap"><span data-anzahl="fahrlehrer">9</span> Fahrlehrer/innen</span> · <span style="white-space: nowrap"><span data-anzahl="lokale">3</span> Lokale</span> · <span style="white-space: nowrap">1 Anmeldung</span></p>
+<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted)"><span style="white-space: nowrap"><span data-anzahl="fahrlehrer">8</span> Fahrlehrer/innen</span> · <span style="white-space: nowrap"><span data-anzahl="lokale">3</span> Lokale</span> · <span style="white-space: nowrap">1 Anmeldung</span></p>
 <h1 class="t-haupt" style="margin: 0; font-size: clamp(40px, 5.6vw, 76px); line-height: 1.02">Verkehrsschule Oberbaselbiet</h1>
 <p style="margin: 28px 0 0; font-size: 20px; line-height: 1.5; color: var(--muted); max-width: 46ch">Wähle dein Lokal, suche dir einen Termin aus und melde dich direkt online an. Einfacher geht’s nicht.</p>
 </div>
@@ -137,7 +137,6 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <button type="button" class="spot" style="left: 30%; top: 1%; width: 30%; height: 22%" aria-label="Roger Schreiber"><span class="pop"><img src="bilder/roger-schreiber.jpg" alt="" loading="lazy" decoding="async" style="object-position: 50% 30%"><span>Roger Schreiber</span></span></button>
 <button type="button" class="spot" style="left: 64%; top: 15%; width: 34%; height: 19%" aria-label="Ken Klauser"><span class="pop"><img src="bilder/ken-klauser.jpg" alt="" loading="lazy" decoding="async" style="object-position: 50% 20%"><span>Ken Klauser</span></span></button>
 <button type="button" class="spot" style="left: 71%; top: 38%; width: 28%; height: 19%" aria-label="Rahel Schaffner"><span class="pop"><img src="bilder/rahel-schaffner.jpg" alt="" loading="lazy" decoding="async" style="object-position: 40% 50%"><span>Rahel Schaffner</span></span></button>
-<button type="button" class="spot" style="left: 63%; top: 72%; width: 25%; height: 24%" aria-label="Thomas Egenter"><span class="pop"><img src="bilder/thomas-egenter.jpg" alt="" loading="lazy" decoding="async" style="object-position: 78% 40%"><span>Thomas Egenter</span></span></button>
 <button type="button" class="spot" style="left: 17%; top: 84%; width: 29%; height: 15%" aria-label="Christian Wüthrich"><span class="pop"><img src="bilder/christian-wuethrich.jpg" alt="" loading="lazy" decoding="async" style="object-position: 64% 30%"><span>Christian Wüthrich</span></span></button>
 <button type="button" class="spot" style="left: 2%; top: 49%; width: 29%; height: 28%" aria-label="Thomas Stuck"><span class="pop"><img src="bilder/thomas-stuck.jpg" alt="" loading="lazy" decoding="async" style="object-position: 76% 20%"><span>Thomas Stuck</span></span></button>
 <button type="button" class="spot" style="left: 0%; top: 25%; width: 33%; height: 14%" aria-label="Cornelia Zumbrunn"><span class="pop"><img src="bilder/cornelia-zumbrunn.jpg" alt="" loading="lazy" decoding="async" style="object-position: 52% 50%"><span>Cornelia Zumbrunn</span></span></button>
@@ -170,7 +169,6 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <h2 class="t-kurs" style="margin: 8px 0 12px; font-size: clamp(26px, 6.4vw, 34px); line-height: 1.1; hyphens: auto; overflow-wrap: break-word">Verkehrskunde&shy;unterricht</h2>
 <p style="margin: 0 0 24px; line-height: 1.6; color: var(--muted)">Der Verkehrskundeunterricht (VKU) ist ein staatlich vorgeschriebener Theoriekurs, der angehende Auto- und Motorradfahrende optimal auf die Praxis im Strassenverkehr vorbereiten soll. Er dient dazu, den Verkehrssinn zu schärfen, Gefahren frühzeitig zu erkennen und eine defensive, verantwortungsbewusste Fahrweise zu fördern. Der Kurs dauert 8 Stunden und ist auf 4 Abende verteilt. Die Kursbestätigung ist unbeschränkt gültig!</p>
 <p style="margin: 0; font-size: 28px; font-weight: 700" data-preis="vku">CHF XX.XX</p>
-<p style="margin: 4px 0 0; font-size: 15px; color: var(--muted)">inklusive Lernmaterial</p>
 </div>
 <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px">
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted)">Kurs</p>
@@ -215,7 +213,7 @@ input:focus{outline:2px solid var(--accent);outline-offset:1px}
 <section id="team" style="background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
 <h2 class="serif" style="margin: 0 0 12px; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.05">Deine Fahrlehrer/innen.</h2>
-<p style="margin: 0 0 48px; font-size: 18px; color: var(--muted); max-width: 52ch"><span data-anzahl="fahrlehrer-wort">Neun</span> Fahrlehrer/innen aus der Region, ein gemeinsames Kursangebot.</p>
+<p style="margin: 0 0 48px; font-size: 18px; color: var(--muted); max-width: 52ch"><span data-anzahl="fahrlehrer-wort">Acht</span> Fahrlehrer/innen aus der Region, ein gemeinsames Kursangebot.</p>
 <div class="team-grid" id="team-grid"></div>
 </div>
 </section>

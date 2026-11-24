@@ -11,7 +11,6 @@ return [
     'dominic'   => '$2y$10$ersetzen-durch-echten-hash',
     'georg'     => '$2y$10$ersetzen-durch-echten-hash',
     'christian' => '$2y$10$ersetzen-durch-echten-hash',
-    'thomi'     => '$2y$10$ersetzen-durch-echten-hash',
     'roger'     => '$2y$10$ersetzen-durch-echten-hash',
     'thomas'    => '$2y$10$ersetzen-durch-echten-hash',
     'cornelia'  => '$2y$10$ersetzen-durch-echten-hash',

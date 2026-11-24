@@ -55,17 +55,6 @@
     "fokus": "64% 30%"
   },
   {
-    "id": "thomas-egenter",
-    "name": "Thomas Egenter",
-    "fahrschule": "Egi’s Fahrschuel, Gelterkinden",
-    "portrait": "Ich bin Thomas Egenter, kurz Thomi. Bei mir lernst du in freundschaftlicher und lockerer Atmosphäre, sicher im heutigen Strassenverkehr unterwegs zu sein, denn Autofahren soll Spass machen. Ich bringe dir auf dem schnellsten Weg alles bei, was du brauchst, und ganz nebenbei bestehst du dann auch die Führerprüfung. Für Senioren und Wiedereinsteiger biete ich Feedback-Fahrten an, wenn du Fragen zu neuen Regeln hast oder einfach eine Rückmeldung zu deinem Fahrstil möchtest.",
-    "link": "http://www.egis-fahrschuel.ch/",
-    "linktext": "Zur Webseite",
-    "foto": "bilder/thomas-egenter.jpg",
-    "fotoalt": "Thomas Egenter",
-    "fokus": "78% 40%"
-  },
-  {
     "id": "roger-schreiber",
     "name": "Roger Schreiber",
     "fahrschule": "Fahrschule Schreiber, Gelterkinden",
