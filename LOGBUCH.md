@@ -36,6 +36,7 @@ Was wann geändert wurde, kompakt, mit Commit. Neueste Sitzung oben. Entscheide 
 | Thomas Egenter nicht mehr dabei: Karte, Foto, Knopf im Logo, Namen in Impressum und Datenschutz, Beispiel-Login entfernt. Überall acht statt neun. Logo selbst bleibt bis zum neuen. |
 | Titelschrift: Montserrat für alle Titel (Wahl der Fahrlehrer/innen), Archivo und Space Grotesk gelöscht, Montserrat 700 ergänzt. |
 | VKU-Preis CHF 190.00, «inklusive Lernmaterial» entfernt. |
+| Überall «Führerausweis» statt «Führerschein» (Menü, Titel der Unterseite). |
 
 ## 2. November 2026, abends · Dani mit Claude, nach dem Call mit den Fahrlehrer/innen
 

@@ -26,7 +26,7 @@ Die acht: Rahel Schaffner, Ken Klauser, Dominic Imhof, Georg Schweingruber, Chri
 
 ```
 index.html        Startseite: Kurse, Lokale, Fahrlehrer, Anmeldung, FAQ
-neu-ab-2027.html  Unterseite «Der Weg zum Führerschein» (bis 10.11.2026 «Neu ab 2027»), Reiter ganz links im Menü; Dateiname bleibt
+neu-ab-2027.html  Unterseite «Der Weg zum Führerausweis» (bis 10.11.2026 «Neu ab 2027», bis 24.11.2026 «…Führerschein»; überall «Führerausweis», Dani), Reiter ganz links im Menü; Dateiname bleibt
 impressum.html    Impressum
 datenschutz.html  Datenschutzerklärung
 app.js            Hell/Dunkel, Klappmenü, lädt daten/*.json und baut Lokale, Termine, Fahrlehrer, Preise; Formular, Auto nach oben
